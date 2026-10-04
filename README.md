@@ -26,6 +26,11 @@
   <img src="https://img.shields.io/badge/API-GitHub%20REST-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub REST API"/>
   <img src="https://img.shields.io/badge/Testing-JUnit%205%20%2B%20Mockito-25A162?style=flat-square&logo=junit5&logoColor=white" alt="JUnit 5 and Mockito"/>
 </p>
+<p>
+  <a href="https://www.loom.com/share/56b18d1b5f3a49f3b75e3df18b23fb69" target="_blank">
+    <img src="https://img.shields.io/badge/▶️_Watch_Demo-54s_CLI_Execution-625df5?style=for-the-badge&logo=loom&logoColor=white" alt="Watch Demo Video"/>
+  </a>
+</p>
 
 <!-- Quick Navigation -->
 <p>
@@ -122,6 +127,9 @@ This project addresses that friction by:
 ## 🖥️ CLI Preview
 
 Below are high-resolution terminal outputs and live workflow demonstrations across all 6 core features:
+
+> [!TIP]
+> 📺 **Watch the Video Demo**: View the **[54-Second CLI Execution Demo on Loom](https://www.loom.com/share/56b18d1b5f3a49f3b75e3df18b23fb69)** to see the commands run live in real-time.
 
 <details open>
 <summary><kbd>🔥 Trending Repository Discovery</kbd></summary>
