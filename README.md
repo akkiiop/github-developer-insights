@@ -129,23 +129,16 @@ Below are illustrative terminal outputs demonstrating key workflows supported by
 ```
 $ java -jar target/*.jar search --query "web framework" --language Rust --sort forks --order desc --limit 2
 
-GitHub Repository Search
-----------------------------------
-Query: web framework
-Language: Rust
-Sort: forks | Order: desc
-Repositories Found: 845
-
-tokio-rs/axum
-Language: Rust
-Stars: 19400
-Forks: 1450
-----------------------------------
-actix/actix-web
-Language: Rust
-Stars: 22100
-Forks: 2300
-----------------------------------
+=================================================================================
+                            GITHUB REPOSITORY SEARCH
+=================================================================================
+Query: web framework | Language: Rust | Sort: forks (desc) | Repositories Found: 845
+---------------------------------------------------------------------------------
+#   Repository                           Language            Stars          Forks
+---------------------------------------------------------------------------------
+1   actix/actix-web                      Rust               22,100          2,300
+2   tokio-rs/axum                        Rust               19,400          1,450
+=================================================================================
 ```
 
 </details>
