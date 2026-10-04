@@ -26,9 +26,17 @@ public class SearchService {
             String sort,
             String order) {
 
+        String finalQuery = searchQuery;
+
+        if (language != null && !language.isBlank()) {
+
+            finalQuery =
+                    finalQuery + " language:" + language;
+        }
+
         SearchResponseDto response =
                 gitHubApiClient.searchRepositories(
-                        searchQuery,
+                        finalQuery,
                         limit,
                         sort,
                         order
@@ -42,6 +50,18 @@ public class SearchService {
         System.out.println("----------------------------------");
         System.out.println(
                 "Query: " + searchQuery
+        );
+
+        if (language != null && !language.isBlank()) {
+
+            System.out.println(
+                    "Language: " + language
+            );
+        }
+
+        System.out.println(
+                "Sort: " + sort
+                + " | Order: " + order
         );
 
         System.out.println(
@@ -73,14 +93,6 @@ public class SearchService {
             );
 
             System.out.println("----------------------------------");
-        }
-        
-        String finalQuery = searchQuery;
-
-        if (language != null && !language.isBlank()) {
-
-            finalQuery =
-                    finalQuery + " language:" + language;
         }
     }
 }
