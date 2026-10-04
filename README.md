@@ -23,7 +23,7 @@
 <p>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=flat-square" alt="MIT License"/></a>
   <img src="https://img.shields.io/badge/Platform-CLI-0ea5e9?style=flat-square&logo=windowsterminal&logoColor=white" alt="CLI Platform"/>
-  <img src="https://img.shields.io/badge/API-GitHub%20REST%20v3-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub REST API v3"/>
+  <img src="https://img.shields.io/badge/API-GitHub%20REST-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub REST API"/>
   <img src="https://img.shields.io/badge/Testing-JUnit%205%20%2B%20Mockito-25A162?style=flat-square&logo=junit5&logoColor=white" alt="JUnit 5 and Mockito"/>
 </p>
 
@@ -51,8 +51,8 @@
 **GitHub Developer Insights** is an open-source command-line tool built with **Java 21** and **Spring Boot 4.1.1** that brings repository discovery, analysis, and tracking directly to your terminal.
 
 - **What it does**: Allows developers to discover fast-growing repositories, search projects with multi-criteria filtering, inspect repository metadata, run side-by-side metric comparisons, snapshot star counts to track growth over time, and manage a persistent local list of bookmarked repositories.
-- **How it works**: Uses **Picocli** for command dispatch and input validation, Spring's **RestClient** to communicate with the public GitHub REST API v3, Jackson for JSON-to-DTO deserialization, and **Spring Data JPA** with **MySQL** for relational persistence of favorites and star snapshots.
-- **Why it matters**: Replaces multi-tab browser context-switching with fast, scriptable terminal commands designed for software engineers, tech leads, and open-source contributors evaluating dependencies and exploring projects.
+- **How it works**: Uses **Picocli** for command dispatch and input validation, Spring's **RestClient** to communicate with the public GitHub REST API, Jackson for JSON-to-DTO deserialization, and **Spring Data JPA** with **MySQL** for relational persistence of favorites and star snapshots.
+- **Why it matters**: Provides a fast, scriptable terminal workflow for developers exploring repositories, comparing projects, and tracking repository growth.
 
 ---
 
@@ -63,7 +63,7 @@ Developers frequently find themselves switching between GitHub search filters, r
 This project addresses that friction by:
 - **Consolidating repository workflows**: Combines search, inspection, side-by-side comparison, and velocity tracking into a unified CLI.
 - **Eliminating browser context switching**: Retrieves key repository metrics (stars, forks, open issues, language, branches, archive status) straight into terminal stdout.
-- **Enabling local star velocity tracking**: Stores point-in-time snapshots in MySQL so developers can measure star acceleration and delta over days, weeks, or months without third-party services.
+- **Enabling local star tracking**: Stores point-in-time snapshots in MySQL so developers can measure star growth and changes over time without third-party services.
 - **Demonstrating modern Spring Boot CLI patterns**: Showcases non-web Spring Boot architectures, constructor-based dependency injection, clean layered separation, and robust CLI error handling.
 
 ---
@@ -103,7 +103,7 @@ This project addresses that friction by:
   <td align="center" width="16%">
     <img src="https://img.shields.io/badge/⭐-Stars-FFD700?style=for-the-badge&labelColor=0d1117" alt="Stars"/>
     <br/><br/>
-    <b>Star Velocity Tracking</b>
+    <b>Star Tracking</b>
     <br/>
     <sub>Captures point-in-time snapshots in MySQL to calculate growth deltas</sub>
   </td>
@@ -203,7 +203,7 @@ Snapshots: 3
 </details>
 
 <details>
-<summary><kbd>📌 Favorite Bookmarks</kbd></summary>
+<summary><kbd>📌 Favorite Repositories</kbd></summary>
 
 ```
 $ java -jar target/*.jar favorite list
@@ -367,7 +367,7 @@ This repository demonstrates practical software engineering patterns and clean c
 - **Constructor-Based Dependency Injection**: Employs Spring's constructor injection across all services and components for immutability, loose coupling, and testability.
 - **Declarative CLI with Picocli**: Implements typed options, positional parameters, subcommand nesting (`favorite list`, `favorite remove`), and auto-generated help banners.
 - **Dedicated Input Validation**: Enforces input sanitization via `InputValidator` before triggering network or database calls (validating `owner/repo` patterns, limit bounds `1–100`, duration intervals, and sorting criteria).
-- **REST Client Integration via Spring `RestClient`**: Uses Spring's modern fluent HTTP client with URI template expansion and query parameter binding against GitHub REST API v3.
+- **REST Client Integration via Spring `RestClient`**: Uses Spring's modern fluent HTTP client with URI template expansion and query parameter binding against the GitHub REST API.
 - **DTO-Based JSON Serialization**: Jackson deserialization maps incoming API payloads directly to strongly-typed DTOs (`RepositoryDto`, `SearchResponseDto`).
 - **Relational Persistence via Spring Data JPA**: Leverages Hibernate ORM and Spring Data repository interfaces with derived queries (`findByOwnerAndRepositoryName`, `findAllByOrderByCreatedAtAsc`).
 - **Centralized CLI Error Translation**: Custom `GitHubApiException` wraps remote HTTP status codes and connection failures; `CliErrorHandler` converts them into clean, human-readable terminal alerts.
@@ -393,7 +393,7 @@ This repository demonstrates practical software engineering patterns and clean c
 
 ## 🌐 GitHub API Integration
 
-The application integrates with the official **GitHub REST API v3** using Spring's fluent `RestClient`. All remote requests are handled through `GitHubApiClient`.
+The application integrates with the official **GitHub REST API** using Spring's fluent `RestClient`. All remote requests are handled through `GitHubApiClient`.
 
 ### Implemented Endpoints
 
@@ -527,30 +527,6 @@ java -jar target/*.jar trending --duration month --limit 5
 java -jar target/*.jar trending --duration day --language Python
 ```
 
-<details>
-<summary><kbd>💻 Example Output (Illustrative)</kbd></summary>
-
-```
-GitHub Trending Repositories
-----------------------------------
-Duration: week
-Limit: 2
-Search Query: created:>2026-09-27 stars:>100 language:Rust
-
-Repositories Found: 42
-
-astral-sh/uv
-Language: Rust
-Stars: 32400
-----------------------------------
-paradedb/paradedb
-Language: Rust
-Stars: 4100
-----------------------------------
-```
-
-</details>
-
 ---
 
 ### 2. `search` — Multi-Filter Repository Search
@@ -583,25 +559,6 @@ java -jar target/*.jar search --query "microservice" --language Go --sort forks 
 java -jar target/*.jar search --query "cli tool" --sort updated --order asc
 ```
 
-<details>
-<summary><kbd>💻 Example Output (Illustrative)</kbd></summary>
-
-```
-GitHub Repository Search
-----------------------------------
-Query: cli tool
-Sort: updated | Order: asc
-Repositories Found: 1540
-
-user/old-cli
-Language: C
-Stars: 120
-Forks: 14
-----------------------------------
-```
-
-</details>
-
 ---
 
 ### 3. `repository` — Repository Details Inspection
@@ -623,27 +580,6 @@ java -jar target/*.jar repository <owner/repository>
 java -jar target/*.jar repository spring-projects/spring-boot
 java -jar target/*.jar repository torvalds/linux
 ```
-
-<details>
-<summary><kbd>💻 Example Output (Illustrative)</kbd></summary>
-
-```
-Repository Details
-----------------------------------
-Name: spring-boot
-Full Name: spring-projects/spring-boot
-Description: Spring Boot helps you to create Spring-powered applications
-Language: Java
-Stars: 75200
-Forks: 41300
-Open Issues: 520
-Default Branch: main
-Archived: false
-Fork: false
-URL: https://github.com/spring-projects/spring-boot
-```
-
-</details>
 
 ---
 
@@ -667,28 +603,6 @@ java -jar target/*.jar compare <owner1/repo1> <owner2/repo2>
 java -jar target/*.jar compare spring-projects/spring-boot quarkusio/quarkus
 java -jar target/*.jar compare facebook/react angular/angular
 ```
-
-<details>
-<summary><kbd>💻 Example Output (Illustrative)</kbd></summary>
-
-```
-================================================================
-                    REPOSITORY COMPARISON
-================================================================
-
-Metric                         react         angular      Difference
-----------------------------------------------------------------
-Stars                        230,000          96,000        -134,000
-Forks                         47,000          25,000         -22,000
-Open Issues                    1,200             850            -350
-----------------------------------------------------------------
-Language                  JavaScript      TypeScript               -
-Archived                       false           false               -
-Fork                           false           false               -
-================================================================
-```
-
-</details>
 
 ---
 
@@ -716,55 +630,11 @@ java -jar target/*.jar stars torvalds/linux
 java -jar target/*.jar stars torvalds/linux --history
 ```
 
-<details>
-<summary><kbd>💻 Growth Summary Output (Illustrative)</kbd></summary>
-
-```
-Star snapshot saved successfully.
-----------------------------------
-Repository: torvalds/linux
-Stars: 185420
-Captured At: 2026-10-04T10:15:30.123
-
-Star Growth
-==================================================
-Repository: torvalds/linux
-
-First Snapshot : 180000
-Latest Snapshot: 185420
-Growth         : +5420
-Snapshots      : 3
-First Captured : 2026-09-01T08:00:00
-Latest Captured: 2026-10-04T10:15:30.123
-```
-
-</details>
-
-<details>
-<summary><kbd>💻 Complete History Table Output (Illustrative)</kbd></summary>
-
-```
-Star History
-==================================================
-Repository: torvalds/linux
-
-Captured At               Stars          
-------------------------------------------
-2026-09-01T08:00:00       180000         
-2026-09-18T12:30:00       182500         
-2026-10-04T10:15:30       185420         
-------------------------------------------
-Total Growth: +5420
-Snapshots: 3
-```
-
-</details>
-
 ---
 
 ### 6. `favorite` — Local Bookmark Management
 
-Manages your personal list of favorite repositories stored in MySQL.
+Manages locally persisted favorite repositories stored in MySQL.
 
 #### Subcommands:
 - `favorite <owner/repo>` — Adds a repository to favorites (prevents duplicates).
@@ -782,25 +652,6 @@ java -jar target/*.jar favorite list
 # Remove a repository from favorites
 java -jar target/*.jar favorite remove spring-projects/spring-boot
 ```
-
-<details>
-<summary><kbd>💻 List Output (Illustrative)</kbd></summary>
-
-```
-======================================================================
- Favorite Repositories
-======================================================================
-
-ID    Repository                          Added At            
-----------------------------------------------------------------------
-1     torvalds/linux                      2026-10-01 14:30:00
-2     spring-projects/spring-boot         2026-10-02 09:15:00
-----------------------------------------------------------------------
-
-Total Favorites: 2
-```
-
-</details>
 
 ---
 
@@ -877,7 +728,7 @@ The application uses **Spring Data JPA** with MySQL for persistent local storage
 <td width="50%">
 
 ### Table: `favorite`
-Stores personal bookmarked repositories.
+Stores locally persisted favorite repositories.
 
 | Column | Type | Constraints | Description |
 |:---|:---|:---:|:---|
