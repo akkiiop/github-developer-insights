@@ -129,7 +129,7 @@ This project addresses that friction by:
 Below are high-resolution terminal outputs and live workflow demonstrations across all 6 core features:
 
 > [!TIP]
-> 📺 **Watch the Video Demo**: View the **[54-Second CLI Execution Demo on Loom](https://www.loom.com/share/56b18d1b5f3a49f3b75e3df18b23fb69)** to see the commands run live in real-time.
+> 📺 **Watch the Video Demo**: View the **[CLI Execution Demo on Loom](https://www.loom.com/share/56b18d1b5f3a49f3b75e3df18b23fb69)** to see the commands run live in real-time.
 
 <details open>
 <summary><kbd>🔥 Trending Repository Discovery</kbd></summary>
