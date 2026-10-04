@@ -70,49 +70,49 @@ This project addresses that friction by:
 
 ## ✨ Features
 
-<table>
-<tr>
-  <td align="center" width="16%">
+<table width="100%">
+<tr valign="top">
+  <td align="center" width="16.66%" valign="top">
     <img src="https://img.shields.io/badge/🔥-Trending-FF6B6B?style=for-the-badge&labelColor=0d1117" alt="Trending"/>
     <br/><br/>
     <b>Trending Discovery</b>
     <br/>
-    <sub>Discovers fast-growing repos across day, week, month, or year periods</sub>
+    <sub>Discovers fast-growing repos by date &amp; min stars</sub>
   </td>
-  <td align="center" width="16%">
+  <td align="center" width="16.66%" valign="top">
     <img src="https://img.shields.io/badge/🔎-Search-4ECDC4?style=for-the-badge&labelColor=0d1117" alt="Search"/>
     <br/><br/>
     <b>Multi-Filter Search</b>
     <br/>
-    <sub>Keyword queries with language filtering, sort criteria &amp; order direction</sub>
+    <sub>Multi-criteria search with sort &amp; order filters</sub>
   </td>
-  <td align="center" width="16%">
+  <td align="center" width="16.66%" valign="top">
     <img src="https://img.shields.io/badge/📋-Details-45B7D1?style=for-the-badge&labelColor=0d1117" alt="Details"/>
     <br/><br/>
     <b>Repository Details</b>
     <br/>
-    <sub>Inspects stars, forks, issues, language, branch &amp; archive metadata</sub>
+    <sub>Inspects stars, forks, issues &amp; repository metadata</sub>
   </td>
-  <td align="center" width="16%">
+  <td align="center" width="16.66%" valign="top">
     <img src="https://img.shields.io/badge/⚖️-Compare-F7DC6F?style=for-the-badge&labelColor=0d1117" alt="Compare"/>
     <br/><br/>
     <b>Metric Comparison</b>
     <br/>
-    <sub>Side-by-side tabular diff with automated difference calculation</sub>
+    <sub>Side-by-side metric diff with automated delta calculation</sub>
   </td>
-  <td align="center" width="16%">
+  <td align="center" width="16.66%" valign="top">
     <img src="https://img.shields.io/badge/⭐-Stars-FFD700?style=for-the-badge&labelColor=0d1117" alt="Stars"/>
     <br/><br/>
     <b>Star Tracking</b>
     <br/>
-    <sub>Captures point-in-time snapshots in MySQL to calculate growth deltas</sub>
+    <sub>Captures star snapshots in MySQL to calculate growth deltas</sub>
   </td>
-  <td align="center" width="16%">
+  <td align="center" width="16.66%" valign="top">
     <img src="https://img.shields.io/badge/📌-Favorites-E056A0?style=for-the-badge&labelColor=0d1117" alt="Favorites"/>
     <br/><br/>
     <b>Favorites Management</b>
     <br/>
-    <sub>Persists bookmarked repositories locally with duplicate prevention</sub>
+    <sub>Persists favorite repos locally with duplicate prevention</sub>
   </td>
 </tr>
 </table>
@@ -724,8 +724,8 @@ Execute all tests via Maven:
 The application uses **Spring Data JPA** with MySQL for persistent local storage. Tables are managed via Hibernate (`ddl-auto=update`):
 
 <table>
-<tr>
-<td width="50%">
+<tr valign="top">
+<td width="50%" valign="top">
 
 ### Table: `favorite`
 Stores locally persisted favorite repositories.
@@ -738,7 +738,7 @@ Stores locally persisted favorite repositories.
 | `created_at` | `DATETIME` | Nullable | Timestamp when favorited |
 
 </td>
-<td width="50%">
+<td width="50%" valign="top">
 
 ### Table: `star_snapshot`
 Stores chronological star counts for velocity tracking.
