@@ -1,6 +1,7 @@
 package com.githubinsights.github_developer_insights.service;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -12,6 +13,9 @@ import com.githubinsights.github_developer_insights.repository.StarSnapshotRepos
 
 @Service
 public class StarTrackingService {
+
+    private static final DateTimeFormatter DATE_TIME_FORMATTER =
+            DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     private final GitHubApiClient gitHubApiClient;
 
@@ -53,21 +57,21 @@ public class StarTrackingService {
 
         System.out.println();
         System.out.println("Star snapshot saved successfully.");
-        System.out.println("----------------------------------");
+        System.out.println("--------------------------------------------------");
 
         System.out.println(
-                "Repository: "
+                "Repository  : "
                         + repository.getFullName()
         );
 
         System.out.println(
-                "Stars: "
-                        + repository.getStargazersCount()
+                "Stars       : "
+                        + formatNumber(repository.getStargazersCount())
         );
 
         System.out.println(
-                "Captured At: "
-                        + snapshot.getCapturedAt()
+                "Captured At : "
+                        + snapshot.getCapturedAt().format(DATE_TIME_FORMATTER)
         );
     }
 
@@ -110,11 +114,12 @@ public class StarTrackingService {
                 latestStars - firstStars;
 
         System.out.println();
-        System.out.println("Star Growth");
+        System.out.println("==================================================");
+        System.out.println("                   STAR GROWTH");
         System.out.println("==================================================");
 
         System.out.println(
-                "Repository: "
+                "Repository  : "
                         + owner
                         + "/"
                         + repositoryName
@@ -124,12 +129,12 @@ public class StarTrackingService {
 
         System.out.println(
                 "First Snapshot : "
-                        + firstStars
+                        + formatNumber(firstStars)
         );
 
         System.out.println(
                 "Latest Snapshot: "
-                        + latestStars
+                        + formatNumber(latestStars)
         );
 
         System.out.println(
@@ -144,13 +149,15 @@ public class StarTrackingService {
 
         System.out.println(
                 "First Captured : "
-                        + firstSnapshot.getCapturedAt()
+                        + firstSnapshot.getCapturedAt().format(DATE_TIME_FORMATTER)
         );
 
         System.out.println(
                 "Latest Captured: "
-                        + latestSnapshot.getCapturedAt()
+                        + latestSnapshot.getCapturedAt().format(DATE_TIME_FORMATTER)
         );
+
+        System.out.println("==================================================");
     }
 
     public void showStarHistory(
@@ -175,11 +182,12 @@ public class StarTrackingService {
         }
 
         System.out.println();
-        System.out.println("Star History");
+        System.out.println("==================================================");
+        System.out.println("                   STAR HISTORY");
         System.out.println("==================================================");
 
         System.out.println(
-                "Repository: "
+                "Repository  : "
                         + owner
                         + "/"
                         + repositoryName
@@ -188,26 +196,26 @@ public class StarTrackingService {
         System.out.println();
 
         System.out.printf(
-                "%-25s %-15s%n",
+                "%-28s %21s%n",
                 "Captured At",
                 "Stars"
         );
 
         System.out.println(
-                "------------------------------------------"
+                "--------------------------------------------------"
         );
 
         for (StarSnapshot snapshot : snapshots) {
 
             System.out.printf(
-                    "%-25s %-15d%n",
-                    snapshot.getCapturedAt(),
-                    snapshot.getStars()
+                    "%-28s %21s%n",
+                    snapshot.getCapturedAt().format(DATE_TIME_FORMATTER),
+                    formatNumber(snapshot.getStars())
             );
         }
 
         System.out.println(
-                "------------------------------------------"
+                "--------------------------------------------------"
         );
 
         StarSnapshot firstSnapshot =
@@ -223,22 +231,33 @@ public class StarTrackingService {
                         - firstSnapshot.getStars();
 
         System.out.println(
-                "Total Growth: "
+                "Total Growth : "
                         + formatGrowth(growth)
         );
 
         System.out.println(
-                "Snapshots: "
+                "Snapshots    : "
                         + snapshots.size()
         );
+
+        System.out.println("==================================================");
+    }
+
+    private String formatNumber(Integer value) {
+
+        if (value == null) {
+            return "N/A";
+        }
+
+        return String.format("%,d", value);
     }
 
     private String formatGrowth(int growth) {
 
         if (growth > 0) {
-            return "+" + growth;
+            return "+" + String.format("%,d", growth);
         }
 
-        return String.valueOf(growth);
+        return String.format("%,d", growth);
     }
-}
+}
