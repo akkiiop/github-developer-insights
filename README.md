@@ -4,45 +4,39 @@
 <!--                     ANIMATED HEADER BANNER                      -->
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,25:161b22,50:1a1e2e,75:1f2937,100:0d1117&height=250&section=header&text=GitHub%20Developer%20Insights&fontSize=44&fontColor=58a6ff&fontAlignY=32&desc=🔍%20Discover%20•%20Search%20•%20Compare%20•%20Track%20•%20Manage&descSize=16&descColor=8b949e&descAlignY=52&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,25:161b22,50:1a1e2e,75:1f2937,100:0d1117&height=240&section=header&text=GitHub%20Developer%20Insights&fontSize=42&fontColor=58a6ff&fontAlignY=32&desc=Discover%20•%20Search%20•%20Compare%20•%20Track%20•%20Manage&descSize=15&descColor=8b949e&descAlignY=52&animation=fadeIn" width="100%"/>
 
-<!-- Typing SVG Animation -->
+<!-- Typing SVG Tagline -->
 <a href="https://github.com/akkiiop/github-developer-insights">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=65&lines=Java+%2B+Spring+Boot+CLI+for+GitHub+Insights;Search+%7C+Compare+%7C+Track+%7C+Manage+Repositories" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=60&lines=Java+21+%2B+Spring+Boot+CLI+for+GitHub+Intelligence;Search+%7C+Compare+%7C+Track+Stars+%7C+Manage+Favorites" alt="Typing Tagline" />
 </a>
 
-<br/>
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                        BADGE ROWS                               -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-<!-- Tech Stack Badges -->
+<!-- Badges -->
 <p>
   <img src="https://img.shields.io/badge/Java-21-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java 21"/>
-  <img src="https://img.shields.io/badge/Spring%20Boot-4.1.1-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot"/>
-  <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL"/>
-  <img src="https://img.shields.io/badge/Picocli-4.7.7-5865F2?style=flat-square" alt="Picocli"/>
-  <img src="https://img.shields.io/badge/Maven-3.9+-C71A36?style=flat-square&logo=apachemaven&logoColor=white" alt="Maven"/>
+  <img src="https://img.shields.io/badge/Spring%20Boot-4.1.1-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot 4.1.1"/>
+  <img src="https://img.shields.io/badge/Picocli-4.7.7-5865F2?style=flat-square" alt="Picocli 4.7.7"/>
+  <img src="https://img.shields.io/badge/Spring%20Data-JPA-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="Spring Data JPA"/>
+  <img src="https://img.shields.io/badge/MySQL-8.0+-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL 8.0+"/>
+  <img src="https://img.shields.io/badge/Maven-3.9+-C71A36?style=flat-square&logo=apachemaven&logoColor=white" alt="Maven 3.9+"/>
 </p>
-
-<!-- Status Badges -->
 <p>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=flat-square" alt="License MIT"/></a>
-  <img src="https://img.shields.io/badge/Platform-CLI-0ea5e9?style=flat-square&logo=windowsterminal&logoColor=white" alt="CLI"/>
-  <img src="https://img.shields.io/badge/API-GitHub%20REST%20v3-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub API"/>
-  <img src="https://img.shields.io/badge/Tests-JUnit%205%20%2B%20Mockito-25A162?style=flat-square&logo=junit5&logoColor=white" alt="Tests"/>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=flat-square" alt="MIT License"/></a>
+  <img src="https://img.shields.io/badge/Platform-CLI-0ea5e9?style=flat-square&logo=windowsterminal&logoColor=white" alt="CLI Platform"/>
+  <img src="https://img.shields.io/badge/API-GitHub%20REST%20v3-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub REST API v3"/>
+  <img src="https://img.shields.io/badge/Testing-JUnit%205%20%2B%20Mockito-25A162?style=flat-square&logo=junit5&logoColor=white" alt="JUnit 5 and Mockito"/>
 </p>
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                     QUICK NAVIGATION                            -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
+<!-- Quick Navigation -->
 <p>
   <a href="#-project-overview">Overview</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#-why-this-project">Why This Project?</a>&nbsp;&nbsp;•&nbsp;&nbsp;
   <a href="#-features">Features</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#-cli-preview">CLI Preview</a>&nbsp;&nbsp;•&nbsp;&nbsp;
   <a href="#-architecture">Architecture</a>&nbsp;&nbsp;•&nbsp;&nbsp;
-  <a href="#-getting-started">Quick Start</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#-key-engineering-concepts">Engineering Concepts</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#-tech-stack">Tech Stack</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#-getting-started">Getting Started</a>&nbsp;&nbsp;•&nbsp;&nbsp;
   <a href="#-usage--commands">Commands</a>&nbsp;&nbsp;•&nbsp;&nbsp;
   <a href="#-testing">Testing</a>&nbsp;&nbsp;•&nbsp;&nbsp;
   <a href="#-license">License</a>
@@ -50,114 +44,194 @@
 
 </div>
 
-<br/>
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                     PROJECT OVERVIEW                            -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+---
 
 ## 🎯 Project Overview
 
-> **GitHub Developer Insights** is a Spring Boot command-line application that integrates with the **GitHub REST API** to help developers discover, search, compare, and monitor public repositories — all from the terminal.
+**GitHub Developer Insights** is an open-source command-line tool built with **Java 21** and **Spring Boot 4.1.1** that brings repository discovery, analysis, and tracking directly to your terminal.
 
-<table>
-<tr>
-<td width="50%">
-
-### 🧩 What It Does
-A terminal-first tool that puts the entire GitHub ecosystem at your fingertips. No browser needed — search trending repos, compare projects side-by-side, track star growth over time, and maintain a personal favorites list.
-
-</td>
-<td width="50%">
-
-### 🔧 Built With
-- **Picocli** — CLI commands & argument parsing
-- **Spring Boot** — DI & application configuration
-- **Spring RestClient** — GitHub API communication
-- **Jackson** — JSON-to-DTO mapping
-- **Spring Data JPA + MySQL** — Persistent storage
-- **JUnit 5 + Mockito** — Automated testing
-
-</td>
-</tr>
-</table>
+- **What it does**: Allows developers to discover fast-growing repositories, search projects with multi-criteria filtering, inspect repository metadata, run side-by-side metric comparisons, snapshot star counts to track growth over time, and manage a persistent local list of bookmarked repositories.
+- **How it works**: Uses **Picocli** for command dispatch and input validation, Spring's **RestClient** to communicate with the public GitHub REST API v3, Jackson for JSON-to-DTO deserialization, and **Spring Data JPA** with **MySQL** for relational persistence of favorites and star snapshots.
+- **Why it matters**: Replaces multi-tab browser context-switching with fast, scriptable terminal commands designed for software engineers, tech leads, and open-source contributors evaluating dependencies and exploring projects.
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                        FEATURES                                 -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+## 💡 Why This Project?
+
+Developers frequently find themselves switching between GitHub search filters, repository homepages, release metrics, and external comparison sites when evaluating libraries, tracking open-source competitors, or researching technology stacks.
+
+This project addresses that friction by:
+- **Consolidating repository workflows**: Combines search, inspection, side-by-side comparison, and velocity tracking into a unified CLI.
+- **Eliminating browser context switching**: Retrieves key repository metrics (stars, forks, open issues, language, branches, archive status) straight into terminal stdout.
+- **Enabling local star velocity tracking**: Stores point-in-time snapshots in MySQL so developers can measure star acceleration and delta over days, weeks, or months without third-party services.
+- **Demonstrating modern Spring Boot CLI patterns**: Showcases non-web Spring Boot architectures, constructor-based dependency injection, clean layered separation, and robust CLI error handling.
+
+---
 
 ## ✨ Features
 
 <table>
 <tr>
-  <td align="center" width="140">
-    <br/>
+  <td align="center" width="16%">
     <img src="https://img.shields.io/badge/🔥-Trending-FF6B6B?style=for-the-badge&labelColor=0d1117" alt="Trending"/>
     <br/><br/>
-    <sub><b>Trending Repos</b></sub>
+    <b>Trending Discovery</b>
     <br/>
-    <sub>Discover what's hot by<br/>duration & language</sub>
-    <br/><br/>
+    <sub>Discovers fast-growing repos across day, week, month, or year periods</sub>
   </td>
-  <td align="center" width="140">
-    <br/>
+  <td align="center" width="16%">
     <img src="https://img.shields.io/badge/🔎-Search-4ECDC4?style=for-the-badge&labelColor=0d1117" alt="Search"/>
     <br/><br/>
-    <sub><b>Smart Search</b></sub>
+    <b>Multi-Filter Search</b>
     <br/>
-    <sub>Sort, filter, and<br/>explore GitHub repos</sub>
-    <br/><br/>
+    <sub>Keyword queries with language filtering, sort criteria &amp; order direction</sub>
   </td>
-  <td align="center" width="140">
-    <br/>
+  <td align="center" width="16%">
     <img src="https://img.shields.io/badge/📋-Details-45B7D1?style=for-the-badge&labelColor=0d1117" alt="Details"/>
     <br/><br/>
-    <sub><b>Repo Details</b></sub>
+    <b>Repository Details</b>
     <br/>
-    <sub>Comprehensive info<br/>for any public repo</sub>
-    <br/><br/>
+    <sub>Inspects stars, forks, issues, language, branch &amp; archive metadata</sub>
   </td>
-  <td align="center" width="140">
-    <br/>
+  <td align="center" width="16%">
     <img src="https://img.shields.io/badge/⚖️-Compare-F7DC6F?style=for-the-badge&labelColor=0d1117" alt="Compare"/>
     <br/><br/>
-    <sub><b>Compare Repos</b></sub>
+    <b>Metric Comparison</b>
     <br/>
-    <sub>Side-by-side metrics<br/>with difference calc</sub>
-    <br/><br/>
+    <sub>Side-by-side tabular diff with automated difference calculation</sub>
   </td>
-  <td align="center" width="140">
-    <br/>
+  <td align="center" width="16%">
     <img src="https://img.shields.io/badge/⭐-Stars-FFD700?style=for-the-badge&labelColor=0d1117" alt="Stars"/>
     <br/><br/>
-    <sub><b>Star Tracking</b></sub>
+    <b>Star Velocity Tracking</b>
     <br/>
-    <sub>Track star growth<br/>over time with DB</sub>
-    <br/><br/>
+    <sub>Captures point-in-time snapshots in MySQL to calculate growth deltas</sub>
   </td>
-  <td align="center" width="140">
-    <br/>
+  <td align="center" width="16%">
     <img src="https://img.shields.io/badge/📌-Favorites-E056A0?style=for-the-badge&labelColor=0d1117" alt="Favorites"/>
     <br/><br/>
-    <sub><b>Favorites</b></sub>
+    <b>Favorites Management</b>
     <br/>
-    <sub>Save, list & remove<br/>your favorite repos</sub>
-    <br/><br/>
+    <sub>Persists bookmarked repositories locally with duplicate prevention</sub>
   </td>
 </tr>
 </table>
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                      ARCHITECTURE                               -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+## 🖥️ CLI Preview
+
+Below are illustrative terminal outputs demonstrating key workflows supported by the CLI:
+
+<details open>
+<summary><kbd>🔍 Repository Search &amp; Filtering</kbd></summary>
+
+```
+$ java -jar target/*.jar search --query "web framework" --language Rust --sort forks --order desc --limit 2
+
+GitHub Repository Search
+----------------------------------
+Query: web framework
+Language: Rust
+Sort: forks | Order: desc
+Repositories Found: 845
+
+tokio-rs/axum
+Language: Rust
+Stars: 19400
+Forks: 1450
+----------------------------------
+actix/actix-web
+Language: Rust
+Stars: 22100
+Forks: 2300
+----------------------------------
+```
+
+</details>
+
+<details>
+<summary><kbd>⚖️ Repository Comparison</kbd></summary>
+
+```
+$ java -jar target/*.jar compare spring-projects/spring-boot quarkusio/quarkus
+
+================================================================
+                    REPOSITORY COMPARISON
+================================================================
+
+Metric                  spring-boot         quarkus      Difference
+----------------------------------------------------------------
+Stars                        75,200          14,100         -61,100
+Forks                        41,300           2,700         -38,600
+Open Issues                     520             680            +160
+----------------------------------------------------------------
+Language                       Java            Java               -
+Archived                      false           false               -
+Fork                          false           false               -
+================================================================
+```
+
+</details>
+
+<details>
+<summary><kbd>⭐ Star Tracking &amp; Growth History</kbd></summary>
+
+```
+$ java -jar target/*.jar stars torvalds/linux --history
+
+Star snapshot saved successfully.
+----------------------------------
+Repository: torvalds/linux
+Stars: 185,420
+Captured At: 2026-10-04T10:15:30.123
+
+Star History
+==================================================
+Repository: torvalds/linux
+
+Captured At               Stars          
+------------------------------------------
+2026-09-01T08:00:00       180,000        
+2026-09-18T12:30:00       182,500        
+2026-10-04T10:15:30       185,420        
+------------------------------------------
+Total Growth: +5420
+Snapshots: 3
+```
+
+</details>
+
+<details>
+<summary><kbd>📌 Favorite Bookmarks</kbd></summary>
+
+```
+$ java -jar target/*.jar favorite list
+
+======================================================================
+ Favorite Repositories
+======================================================================
+
+ID    Repository                          Added At            
+----------------------------------------------------------------------
+1     torvalds/linux                      2026-10-01 14:30:00
+2     spring-projects/spring-boot         2026-10-02 09:15:00
+3     facebook/react                      2026-10-03 20:00:00
+----------------------------------------------------------------------
+
+Total Favorites: 3
+```
+
+</details>
+
+> [!NOTE]
+> Output values shown above are illustrative representations of terminal execution.
+
+---
 
 ## 🏛️ Architecture
 
-The application strictly follows a **clean layered architecture** with separation of concerns:
+The application strictly enforces a **clean layered architecture** with clear separation of concerns across presentation, business logic, client integration, and persistent data access:
 
 <div align="center">
   <img src="assets/architecture-diagram.png" alt="GitHub Developer Insights — Current CLI Architecture" width="100%" style="border-radius: 10px;"/>
@@ -239,226 +313,239 @@ graph TB
 ```
 com.githubinsights.github_developer_insights/
 │
-├── 📁 cli/                         # Picocli command definitions
-│   ├── GithubInsightsCommand.java        # Root CLI command
-│   ├── TrendingCommand.java              # trending subcommand
-│   ├── SearchCommand.java                # search subcommand
-│   ├── RepositoryCommand.java            # repository subcommand
-│   ├── CompareCommand.java               # compare subcommand
-│   ├── StarsCommand.java                 # stars subcommand
-│   ├── FavoriteCommand.java              # favorite subcommand
-│   ├── RemoveFavoriteCommand.java        # favorite remove
-│   ├── ListFavoriteCommand.java          # favorite list
+├── 📁 cli/                         # Picocli command implementations
+│   ├── GithubInsightsCommand.java        # Root CLI command definition
+│   ├── TrendingCommand.java              # 'trending' command
+│   ├── SearchCommand.java                # 'search' command
+│   ├── RepositoryCommand.java            # 'repository' command
+│   ├── CompareCommand.java               # 'compare' command
+│   ├── StarsCommand.java                 # 'stars' command
+│   ├── FavoriteCommand.java              # 'favorite' command (add / help)
+│   ├── RemoveFavoriteCommand.java        # 'favorite remove' subcommand
+│   ├── ListFavoriteCommand.java          # 'favorite list' subcommand
 │   └── 📁 util/
-│       ├── CliErrorHandler.java          # HTTP error handling
-│       ├── ConsoleFormatter.java         # Output formatting
-│       └── InputValidator.java           # Input validation
+│       ├── CliErrorHandler.java          # HTTP exception to console error translation
+│       ├── ConsoleFormatter.java         # Tabular and number formatting utilities
+│       └── InputValidator.java           # Parameter and flag validation logic
 │
 ├── 📁 client/
-│   └── GitHubApiClient.java              # RestClient for GitHub API
+│   └── GitHubApiClient.java              # Spring RestClient integration for GitHub REST API
 │
 ├── 📁 dto/
-│   ├── RepositoryDto.java                # Repository data model
-│   └── SearchResponseDto.java            # Search response wrapper
+│   ├── RepositoryDto.java                # DTO mapping GitHub repository JSON
+│   └── SearchResponseDto.java            # DTO mapping GitHub search response JSON
 │
 ├── 📁 entity/
-│   ├── Favorite.java                     # JPA favorite entity
-│   └── StarSnapshot.java                 # JPA star snapshot entity
+│   ├── Favorite.java                     # JPA entity for bookmarked repositories
+│   └── StarSnapshot.java                 # JPA entity for historical star snapshots
 │
 ├── 📁 exception/
-│   └── GitHubApiException.java           # Custom API exception
+│   └── GitHubApiException.java           # Application runtime exception wrapping HTTP errors
 │
 ├── 📁 repository/
-│   ├── FavoriteRepository.java           # Favorite JPA repository
-│   └── StarSnapshotRepository.java       # Snapshot JPA repository
+│   ├── FavoriteRepository.java           # Spring Data JPA repository for Favorite entity
+│   └── StarSnapshotRepository.java       # Spring Data JPA repository for StarSnapshot entity
 │
 └── 📁 service/
-    ├── TrendingService.java              # Trending logic
-    ├── SearchService.java                # Search logic
-    ├── RepositoryService.java            # Repo details logic
-    ├── CompareService.java               # Comparison logic
-    ├── StarTrackingService.java          # Star tracking logic
-    └── FavoriteService.java              # Favorites logic
+    ├── TrendingService.java              # Approximated trending repository discovery
+    ├── SearchService.java                # Multi-criteria search execution
+    ├── RepositoryService.java            # Single repository inspection
+    ├── CompareService.java               # Repository metric comparison logic
+    ├── StarTrackingService.java          # Star snapshot recording and delta calculation
+    └── FavoriteService.java              # Favorite repository CRUD operations
 ```
 
 </details>
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                      TECH STACK                                 -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+## 🧠 Key Engineering Concepts
+
+This repository demonstrates practical software engineering patterns and clean code principles:
+
+- **Layered Architecture & Separation of Concerns**: Isolates CLI command handling, domain services, remote HTTP integration, and relational persistence into distinct architectural tiers.
+- **Constructor-Based Dependency Injection**: Employs Spring's constructor injection across all services and components for immutability, loose coupling, and testability.
+- **Declarative CLI with Picocli**: Implements typed options, positional parameters, subcommand nesting (`favorite list`, `favorite remove`), and auto-generated help banners.
+- **Dedicated Input Validation**: Enforces input sanitization via `InputValidator` before triggering network or database calls (validating `owner/repo` patterns, limit bounds `1–100`, duration intervals, and sorting criteria).
+- **REST Client Integration via Spring `RestClient`**: Uses Spring's modern fluent HTTP client with URI template expansion and query parameter binding against GitHub REST API v3.
+- **DTO-Based JSON Serialization**: Jackson deserialization maps incoming API payloads directly to strongly-typed DTOs (`RepositoryDto`, `SearchResponseDto`).
+- **Relational Persistence via Spring Data JPA**: Leverages Hibernate ORM and Spring Data repository interfaces with derived queries (`findByOwnerAndRepositoryName`, `findAllByOrderByCreatedAtAsc`).
+- **Centralized CLI Error Translation**: Custom `GitHubApiException` wraps remote HTTP status codes and connection failures; `CliErrorHandler` converts them into clean, human-readable terminal alerts.
+- **Targeted Unit & Integration Testing**: Unit tests use JUnit 5 and Mockito mock verification (`FavoriteServiceTest`, `InputValidatorTest`); integration tests verify Spring application context loading (`@SpringBootTest`).
+
+---
 
 ## 🛠️ Tech Stack
 
-<table>
-<tr>
-  <th>Layer</th>
-  <th>Technology</th>
-  <th>Version</th>
-  <th>Purpose</th>
-</tr>
-<tr>
-  <td><img src="https://img.shields.io/badge/-Core-ED8B00?style=flat-square" alt="Core"/></td>
-  <td><strong>Java</strong></td>
-  <td><code>21</code></td>
-  <td>Modern Java with latest language features</td>
-</tr>
-<tr>
-  <td><img src="https://img.shields.io/badge/-Framework-6DB33F?style=flat-square" alt="Framework"/></td>
-  <td><strong>Spring Boot</strong></td>
-  <td><code>4.1.1</code></td>
-  <td>Application framework & dependency injection</td>
-</tr>
-<tr>
-  <td><img src="https://img.shields.io/badge/-ORM-6DB33F?style=flat-square" alt="ORM"/></td>
-  <td><strong>Spring Data JPA</strong></td>
-  <td>—</td>
-  <td>Database persistence layer</td>
-</tr>
-<tr>
-  <td><img src="https://img.shields.io/badge/-HTTP-6DB33F?style=flat-square" alt="HTTP"/></td>
-  <td><strong>Spring RestClient</strong></td>
-  <td>—</td>
-  <td>HTTP client for GitHub API</td>
-</tr>
-<tr>
-  <td><img src="https://img.shields.io/badge/-CLI-5865F2?style=flat-square" alt="CLI"/></td>
-  <td><strong>Picocli</strong></td>
-  <td><code>4.7.7</code></td>
-  <td>Command-line argument parsing</td>
-</tr>
-<tr>
-  <td><img src="https://img.shields.io/badge/-Database-4479A1?style=flat-square" alt="Database"/></td>
-  <td><strong>MySQL</strong></td>
-  <td><code>8.0+</code></td>
-  <td>Persistent favorites & star snapshots</td>
-</tr>
-<tr>
-  <td><img src="https://img.shields.io/badge/-Build-C71A36?style=flat-square" alt="Build"/></td>
-  <td><strong>Maven</strong></td>
-  <td><code>3.9+</code></td>
-  <td>Build tool & dependency management</td>
-</tr>
-</table>
+| Layer | Technology | Version | Purpose |
+|:---|:---|:---:|:---|
+| **Language** | Java | `21` | Modern Java runtime with record-friendly typing and Date/Time APIs |
+| **Framework** | Spring Boot | `4.1.1` | Application framework, dependency injection & bean lifecycle |
+| **CLI Engine** | Picocli | `4.7.7` | Declarative command-line option parsing and execution |
+| **HTTP Client** | Spring RestClient | `Spring Web` | Fluent HTTP client for GitHub REST API communication |
+| **Data Access** | Spring Data JPA | `Hibernate` | Repository abstraction and object-relational mapping |
+| **Database** | MySQL | `8.0+` | Relational persistence for favorites and star tracking snapshots |
+| **Serialization** | Jackson | Managed | JSON deserialization from GitHub REST responses into DTOs |
+| **Build Tool** | Apache Maven | `3.9+` | Build lifecycle, dependency management & executable packaging |
+| **Testing** | JUnit 5 &amp; Mockito | Managed | Automated unit tests, mock verifications & context integration tests |
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                     PREREQUISITES                               -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+## 🌐 GitHub API Integration
+
+The application integrates with the official **GitHub REST API v3** using Spring's fluent `RestClient`. All remote requests are handled through `GitHubApiClient`.
+
+### Implemented Endpoints
+
+| Operation | GitHub REST API Endpoint | HTTP Method | Implementation Details |
+|:---|:---|:---:|:---|
+| **Repository Details** | `/repos/{owner}/{repository}` | `GET` | Retrieves full repository metadata mapped to `RepositoryDto`. |
+| **Repository Search** | `/search/repositories` | `GET` | Executes keyword search with query parameters: `q`, `sort`, `order`, and `per_page`. |
+| **Trending Discovery** | `/search/repositories` | `GET` | Approximates trending projects by issuing search queries formatted as: `created:>{startDate} stars:>{minStars} [language:{lang}]`, sorted by `stars desc`. |
+
+### Integration Characteristics:
+- **Client Configuration**: Base URL defaults to `https://api.github.com` (configurable in `application.properties`).
+- **Authentication & Rate Limits**: Requests are executed as public, unauthenticated calls. GitHub applies standard IP-based rate limiting (typically 60 requests per hour for unauthenticated clients).
+- **Error Mapping**: Remote HTTP response codes (`400`, `401`, `403`, `404`, `422`, `5xx`) and connection failures are caught and wrapped in `GitHubApiException`.
+
+---
 
 ## 📦 Prerequisites
 
-| # | Requirement | Min Version | Install Link |
-|:-:|:---|:---|:---|
-| 1 | ☕ **Java JDK** | `21+` | [↗ Adoptium](https://adoptium.net/) |
-| 2 | 📦 **Maven** | `3.9+` | [↗ Apache Maven](https://maven.apache.org/download.cgi) |
-| 3 | 🐬 **MySQL** | `8.0+` | [↗ MySQL Downloads](https://dev.mysql.com/downloads/) |
+Ensure the following tools are installed before running the project:
+
+| Tool | Minimum Version | Installation / Documentation |
+|:---|:---:|:---|
+| **Java Development Kit (JDK)** | `21+` | [Adoptium Eclipse Temurin](https://adoptium.net/) |
+| **MySQL Server** | `8.0+` | [MySQL Community Server](https://dev.mysql.com/downloads/mysql/) |
+| **Apache Maven** | `3.9+` | [Apache Maven](https://maven.apache.org/download.cgi) *(or use included wrapper)* |
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                     GETTING STARTED                             -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
 ## 🚀 Getting Started
 
-<table>
-<tr>
-<td>
+Follow these steps to set up and run the application locally:
 
-### `1` &nbsp; Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/akkiiop/github-developer-insights.git
 cd github-developer-insights/github-developer-insights
 ```
 
-### `2` &nbsp; Set up the MySQL database
+> [!NOTE]
+> The Maven project is located in the inner `github-developer-insights/` directory.
+
+### 2. Configure MySQL Database
+
+Open your MySQL client and create the database schema:
 
 ```sql
 CREATE DATABASE github_insights;
 ```
 
-### `3` &nbsp; Configure database credentials
+### 3. Update Database Configuration
 
-Edit `src/main/resources/application.properties`:
+Edit `src/main/resources/application.properties` with your MySQL credentials:
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/github_insights
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+spring.datasource.username=your_mysql_username
+spring.datasource.password=your_mysql_password
 ```
 
-### `4` &nbsp; Build the project
+### 4. Build the Project
+
+Build the executable JAR using the included Maven wrapper:
+
+**Linux / macOS:**
+```bash
+./mvnw clean package
+```
+
+**Windows:**
+```powershell
+.\mvnw.cmd clean package
+```
+
+### 5. Run the Application
+
+Display the root command help to verify installation:
 
 ```bash
-./mvnw clean package -DskipTests
+java -jar target/github-developer-insights-0.0.1-SNAPSHOT.jar --help
 ```
-
-### `5` &nbsp; Run the application
-
-```bash
-java -jar target/github-developer-insights-0.0.1-SNAPSHOT.jar <command> [options]
-```
-
-</td>
-</tr>
-</table>
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                     USAGE & COMMANDS                            -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
 ## 📖 Usage & Commands
 
-<!-- ──────────────────── TRENDING ──────────────────── -->
+The CLI executable supports 6 top-level commands and 2 nested subcommands:
 
-### <img src="https://img.shields.io/badge/🔥-TRENDING-FF6B6B?style=flat-square&labelColor=0d1117" alt="Trending"/> &nbsp; Trending Repositories
+```
+github-insights [COMMAND]
+  trending      Display trending GitHub repositories
+  search        Search GitHub repositories
+  repository    Display details of a GitHub repository
+  compare       Compare two GitHub repositories
+  stars         Track GitHub repository star growth
+  favorite      Manage favorite GitHub repositories
+    list        Display all favorite repositories
+    remove      Remove a repository from favorites
+```
 
-> Discover trending repositories created within a specified time period.
+---
 
+### 1. `trending` — Trending Repository Discovery
+
+Discovers fast-growing repositories created within a given time period with a minimum star threshold.
+
+> [!IMPORTANT]
+> **Discovery Mechanism**: GitHub does not provide an official public Trending API endpoint. This CLI approximates trending repositories by querying GitHub's Search API with date constraints (`created:>{startDate}`), minimum star filters (`stars:>100`), and optional language filters, sorted by stars descending.
+
+#### Syntax:
 ```bash
-# Default: top 10 trending repos from the past week
+java -jar target/*.jar trending [--duration=<day|week|month|year>] [--limit=<1-100>] [--language=<lang>]
+```
+
+#### Options:
+| Option | Type | Default | Description |
+|:---|:---:|:---:|:---|
+| `--duration` | String | `week` | Time window from current date: `day` (1d), `week` (7d), `month` (1m), `year` (1y) |
+| `--limit` | Integer | `10` | Maximum number of results to display (1 to 100) |
+| `--language` | String | — | Filter by programming language (e.g., `Java`, `Rust`, `Python`) |
+
+#### Examples:
+```bash
+# Discover top 10 trending repositories from the past week (default)
 java -jar target/*.jar trending
 
-# Trending repos from the past month, limited to 5
+# Top 5 trending repositories created in the past month
 java -jar target/*.jar trending --duration month --limit 5
 
-# Trending Python repos from the past day
+# Trending Python repositories created in the past day
 java -jar target/*.jar trending --duration day --language Python
 ```
 
 <details>
-<summary><kbd>⚙️ Options</kbd></summary>
-<br/>
-
-| Option | Description | Default | Values |
-|:---|:---|:---:|:---|
-| `--duration` | Time period to search | `week` | `day` · `week` · `month` · `year` |
-| `--limit` | Max repositories to display | `10` | `1` – `100` |
-| `--language` | Filter by programming language | — | Any language name |
-
-</details>
-
-<details>
-<summary><kbd>💻 Example Output</kbd></summary>
+<summary><kbd>💻 Example Output (Illustrative)</kbd></summary>
 
 ```
 GitHub Trending Repositories
 ----------------------------------
 Duration: week
-Limit: 5
-Search Query: created:>2026-09-27 stars:>100
+Limit: 2
+Search Query: created:>2026-09-27 stars:>100 language:Rust
 
-Repositories Found: 12,345
+Repositories Found: 42
 
-facebook/react
-Language: JavaScript
-Stars: 230000
+astral-sh/uv
+Language: Rust
+Stars: 32400
+----------------------------------
+paradedb/paradedb
+Language: Rust
+Stars: 4100
 ----------------------------------
 ```
 
@@ -466,52 +553,50 @@ Stars: 230000
 
 ---
 
-<!-- ──────────────────── SEARCH ──────────────────── -->
+### 2. `search` — Multi-Filter Repository Search
 
-### <img src="https://img.shields.io/badge/🔎-SEARCH-4ECDC4?style=flat-square&labelColor=0d1117" alt="Search"/> &nbsp; Search Repositories
+Searches GitHub repositories matching a keyword query with optional sorting and ordering.
 
-> Search GitHub repositories with advanced filtering and sorting.
-
+#### Syntax:
 ```bash
-# Search for machine learning repos
+java -jar target/*.jar search --query="<search term>" [--limit=<1-100>] [--language=<lang>] [--sort=<stars|forks|updated>] [--order=<asc|desc>]
+```
+
+#### Options:
+| Option | Type | Default | Description |
+|:---|:---:|:---:|:---|
+| `--query` | String | **Required** | Keyword search query passed to GitHub search API |
+| `--limit` | Integer | `10` | Maximum number of results to display (1 to 100) |
+| `--language` | String | — | Filter by language (appends `language:<lang>` to query) |
+| `--sort` | String | `stars` | Sort criteria: `stars`, `forks`, or `updated` |
+| `--order` | String | `desc` | Sort direction: `asc` (ascending) or `desc` (descending) |
+
+#### Examples:
+```bash
+# General search
 java -jar target/*.jar search --query "machine learning"
 
-# Search Rust web frameworks, sorted by forks
-java -jar target/*.jar search --query "web framework" --language Rust --sort forks --limit 5
+# Search Go microservices sorted by forks
+java -jar target/*.jar search --query "microservice" --language Go --sort forks --limit 5
 
-# Search with ascending order
+# Search CLI tools sorted by recently updated in ascending order
 java -jar target/*.jar search --query "cli tool" --sort updated --order asc
 ```
 
 <details>
-<summary><kbd>⚙️ Options</kbd></summary>
-<br/>
-
-| Option | Description | Default | Values |
-|:---|:---|:---:|:---|
-| `--query` | Search query | **required** | Any text |
-| `--limit` | Max results | `10` | `1` – `100` |
-| `--language` | Filter by language | — | Any language name |
-| `--sort` | Sort criteria | `stars` | `stars` · `forks` · `updated` |
-| `--order` | Sort order | `desc` | `asc` · `desc` |
-
-</details>
-
-<details>
-<summary><kbd>💻 Example Output</kbd></summary>
+<summary><kbd>💻 Example Output (Illustrative)</kbd></summary>
 
 ```
 GitHub Repository Search
 ----------------------------------
-Query: web framework
-Language: Rust
-Sort: forks | Order: desc
-Repositories Found: 845
+Query: cli tool
+Sort: updated | Order: asc
+Repositories Found: 1540
 
-nickel-org/nickel.rs
-Language: Rust
-Stars: 3200
-Forks: 180
+user/old-cli
+Language: C
+Stars: 120
+Forks: 14
 ----------------------------------
 ```
 
@@ -519,19 +604,28 @@ Forks: 180
 
 ---
 
-<!-- ──────────────────── REPOSITORY ──────────────────── -->
+### 3. `repository` — Repository Details Inspection
 
-### <img src="https://img.shields.io/badge/📋-DETAILS-45B7D1?style=flat-square&labelColor=0d1117" alt="Details"/> &nbsp; Repository Details
+Inspects metadata and operational flags for a specific repository.
 
-> View detailed information about a specific repository.
+#### Syntax:
+```bash
+java -jar target/*.jar repository <owner/repository>
+```
 
+#### Arguments:
+| Argument | Type | Description |
+|:---|:---:|:---|
+| `<repository>` | Positional | Repository slug in `owner/name` format (e.g., `spring-projects/spring-boot`) |
+
+#### Examples:
 ```bash
 java -jar target/*.jar repository spring-projects/spring-boot
 java -jar target/*.jar repository torvalds/linux
 ```
 
 <details>
-<summary><kbd>💻 Example Output</kbd></summary>
+<summary><kbd>💻 Example Output (Illustrative)</kbd></summary>
 
 ```
 Repository Details
@@ -540,9 +634,9 @@ Name: spring-boot
 Full Name: spring-projects/spring-boot
 Description: Spring Boot helps you to create Spring-powered applications
 Language: Java
-Stars: 75000
-Forks: 40000
-Open Issues: 500
+Stars: 75200
+Forks: 41300
+Open Issues: 520
 Default Branch: main
 Archived: false
 Fork: false
@@ -553,19 +647,29 @@ URL: https://github.com/spring-projects/spring-boot
 
 ---
 
-<!-- ──────────────────── COMPARE ──────────────────── -->
+### 4. `compare` — Side-by-Side Metric Comparison
 
-### <img src="https://img.shields.io/badge/⚖️-COMPARE-F7DC6F?style=flat-square&labelColor=0d1117" alt="Compare"/> &nbsp; Compare Repositories
+Compares two repositories side-by-side with calculated numerical differences.
 
-> Side-by-side comparison of two repositories with a formatted table.
-
+#### Syntax:
 ```bash
-java -jar target/*.jar compare facebook/react angular/angular
+java -jar target/*.jar compare <owner1/repo1> <owner2/repo2>
+```
+
+#### Arguments:
+| Argument | Type | Description |
+|:---|:---:|:---|
+| `<repo1>` | Positional `0` | First repository in `owner/name` format |
+| `<repo2>` | Positional `1` | Second repository in `owner/name` format |
+
+#### Examples:
+```bash
 java -jar target/*.jar compare spring-projects/spring-boot quarkusio/quarkus
+java -jar target/*.jar compare facebook/react angular/angular
 ```
 
 <details>
-<summary><kbd>💻 Example Output</kbd></summary>
+<summary><kbd>💻 Example Output (Illustrative)</kbd></summary>
 
 ```
 ================================================================
@@ -574,13 +678,13 @@ java -jar target/*.jar compare spring-projects/spring-boot quarkusio/quarkus
 
 Metric                         react         angular      Difference
 ----------------------------------------------------------------
-Stars                        230,000        96,000       -134,000
-Forks                         47,000        25,000        -22,000
-Open Issues                    1,200           850          -350
+Stars                        230,000          96,000        -134,000
+Forks                         47,000          25,000         -22,000
+Open Issues                    1,200             850            -350
 ----------------------------------------------------------------
-Language                  JavaScript      TypeScript             -
-Archived                       false           false             -
-Fork                           false           false             -
+Language                  JavaScript      TypeScript               -
+Archived                       false           false               -
+Fork                           false           false               -
 ================================================================
 ```
 
@@ -588,63 +692,69 @@ Fork                           false           false             -
 
 ---
 
-<!-- ──────────────────── STARS ──────────────────── -->
+### 5. `stars` — Star Snapshot & Velocity Tracking
 
-### <img src="https://img.shields.io/badge/⭐-STARS-FFD700?style=flat-square&labelColor=0d1117" alt="Stars"/> &nbsp; Star Tracking
+Fetches current stargazers for a repository, persists a timestamped snapshot to MySQL, and displays growth metrics.
 
-> Track star growth over time. Each run saves a snapshot to the database.
-
+#### Syntax:
 ```bash
-# Save a star snapshot and show growth summary
+java -jar target/*.jar stars <owner/repository> [--history]
+```
+
+#### Options & Arguments:
+| Parameter | Type | Description |
+|:---|:---:|:---|
+| `<repository>` | Positional | Repository slug in `owner/name` format |
+| `--history` | Flag | Displays complete historical snapshot table instead of summary |
+
+#### Examples:
+```bash
+# Record a star snapshot and show growth summary
 java -jar target/*.jar stars torvalds/linux
 
-# Show complete star history table
+# Record a snapshot and display all captured snapshots chronologically
 java -jar target/*.jar stars torvalds/linux --history
 ```
 
 <details>
-<summary><kbd>⚙️ Options</kbd></summary>
-<br/>
-
-| Option | Description |
-|:---|:---|
-| `--history` | Display complete star history table instead of growth summary |
-
-</details>
-
-<details>
-<summary><kbd>💻 Growth Summary</kbd></summary>
+<summary><kbd>💻 Growth Summary Output (Illustrative)</kbd></summary>
 
 ```
+Star snapshot saved successfully.
+----------------------------------
+Repository: torvalds/linux
+Stars: 185420
+Captured At: 2026-10-04T10:15:30.123
+
 Star Growth
 ==================================================
 Repository: torvalds/linux
 
 First Snapshot : 180000
-Latest Snapshot: 185000
-Growth         : +5000
-Snapshots      : 12
-First Captured : 2026-09-01T10:30:00
-Latest Captured: 2026-10-03T20:00:00
+Latest Snapshot: 185420
+Growth         : +5420
+Snapshots      : 3
+First Captured : 2026-09-01T08:00:00
+Latest Captured: 2026-10-04T10:15:30.123
 ```
 
 </details>
 
 <details>
-<summary><kbd>💻 History Table (--history)</kbd></summary>
+<summary><kbd>💻 Complete History Table Output (Illustrative)</kbd></summary>
 
 ```
 Star History
 ==================================================
 Repository: torvalds/linux
 
-Captured At               Stars
+Captured At               Stars          
 ------------------------------------------
-2026-09-01T10:30:00       180000
-2026-09-15T14:00:00       182000
-2026-10-03T20:00:00       185000
+2026-09-01T08:00:00       180000         
+2026-09-18T12:30:00       182500         
+2026-10-04T10:15:30       185420         
 ------------------------------------------
-Total Growth: +5000
+Total Growth: +5420
 Snapshots: 3
 ```
 
@@ -652,61 +762,64 @@ Snapshots: 3
 
 ---
 
-<!-- ──────────────────── FAVORITES ──────────────────── -->
+### 6. `favorite` — Local Bookmark Management
 
-### <img src="https://img.shields.io/badge/📌-FAVORITES-E056A0?style=flat-square&labelColor=0d1117" alt="Favorites"/> &nbsp; Favorites Management
+Manages your personal list of favorite repositories stored in MySQL.
 
-> Save repositories to your local favorites for quick access.
+#### Subcommands:
+- `favorite <owner/repo>` — Adds a repository to favorites (prevents duplicates).
+- `favorite list` — Lists all saved favorites ordered by creation time.
+- `favorite remove <owner/repo>` — Removes a repository from favorites.
 
+#### Examples:
 ```bash
 # Add a repository to favorites
-java -jar target/*.jar favorite torvalds/linux
+java -jar target/*.jar favorite spring-projects/spring-boot
 
 # List all favorites
 java -jar target/*.jar favorite list
 
-# Remove from favorites
-java -jar target/*.jar favorite remove torvalds/linux
+# Remove a repository from favorites
+java -jar target/*.jar favorite remove spring-projects/spring-boot
 ```
 
 <details>
-<summary><kbd>💻 Example Output</kbd></summary>
+<summary><kbd>💻 List Output (Illustrative)</kbd></summary>
 
 ```
 ======================================================================
  Favorite Repositories
 ======================================================================
 
-ID    Repository                          Added At
+ID    Repository                          Added At            
 ----------------------------------------------------------------------
 1     torvalds/linux                      2026-10-01 14:30:00
 2     spring-projects/spring-boot         2026-10-02 09:15:00
-3     facebook/react                      2026-10-03 20:00:00
 ----------------------------------------------------------------------
 
-Total Favorites: 3
+Total Favorites: 2
 ```
 
 </details>
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                     CONFIGURATION                               -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
 ## ⚙️ Configuration
 
-All settings are in `src/main/resources/application.properties`:
+Application settings are managed in `src/main/resources/application.properties`:
 
 ```properties
-# ═══════ GitHub API ═══════
+# ==============================
+# GitHub API Configuration
+# ==============================
 github.api.base-url=https://api.github.com
 github.api.default-limit=10
 github.api.max-limit=100
 github.api.min-stars=100
 
-# ═══════ Database ═══════
+# ==============================
+# Database Configuration
+# ==============================
 spring.datasource.url=jdbc:mysql://localhost:3306/github_insights
 spring.datasource.username=root
 spring.datasource.password=your_password
@@ -716,169 +829,173 @@ spring.jpa.show-sql=false
 spring.jpa.properties.hibernate.format_sql=true
 ```
 
----
+| Property | Default | Purpose |
+|:---|:---:|:---|
+| `github.api.base-url` | `https://api.github.com` | Base URL for remote GitHub REST API endpoints |
+| `github.api.default-limit` | `10` | Default record limit for search and trending queries |
+| `github.api.max-limit` | `100` | Upper bound validated by `InputValidator` |
+| `github.api.min-stars` | `100` | Minimum star threshold used in trending query generation |
+| `spring.datasource.url` | `jdbc:mysql://localhost:3306/github_insights` | JDBC connection string |
+| `spring.jpa.hibernate.ddl-auto` | `update` | Hibernate schema management strategy |
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                       TESTING                                   -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+---
 
 ## 🧪 Testing
 
-<table>
-<tr>
-<td width="50%">
+The repository maintains automated unit and integration tests using **JUnit 5** and **Mockito**:
 
-### 🔬 Unit Tests
+### Implemented Test Suites
 
-| Test Class | Validates |
-|:---|:---|
-| `InputValidatorTest` | Repository format, limit range, duration, sort & order inputs |
-| `FavoriteServiceTest` | Favorite creation & duplicate-favorite handling (Mockito mocks) |
+| Test Class | Type | What It Tests |
+|:---|:---:|:---|
+| `InputValidatorTest` | Unit Test | Validates validation logic: repository slug format (`owner/name`), limit boundary ranges (`1–100`), duration options (`day`, `week`, `month`, `year`), sort values (`stars`, `forks`, `updated`), and order values (`asc`, `desc`). |
+| `FavoriteServiceTest` | Unit Test | Uses Mockito to verify `FavoriteService.addFavorite`: confirms repository entity creation and save dispatch, and verifies duplicate-favorite detection. *(Note: remove and list methods are not covered by unit tests)*. |
+| `GithubDeveloperInsightsApplicationTests` | Integration Test | Verifies that the Spring Boot application context loads cleanly. |
+| `FavoriteServiceIntegrationTest` | Integration Test | Verifies `@SpringBootTest` context configuration for the service tier. |
 
-</td>
-<td width="50%">
+### Running Tests
 
-### 🔗 Integration Tests
-
-| Test Class | Validates |
-|:---|:---|
-| `GithubDeveloperInsightsApplicationTests` | Spring Boot application context loads successfully |
-| `FavoriteServiceIntegrationTest` | Spring integration-test configuration |
-
-</td>
-</tr>
-</table>
+Execute all tests via Maven:
 
 ```bash
-# Run all tests
+# Run all automated tests
 ./mvnw test
 
-# Run a specific test class
+# Run a specific unit test class
 ./mvnw test -Dtest=InputValidatorTest
 ./mvnw test -Dtest=FavoriteServiceTest
 ```
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                    DATABASE SCHEMA                              -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
 ## 🗄️ Database Schema
 
-> Tables are auto-created via JPA (`ddl-auto=update`)
+The application uses **Spring Data JPA** with MySQL for persistent local storage. Tables are managed via Hibernate (`ddl-auto=update`):
 
 <table>
 <tr>
 <td width="50%">
 
-### `favorite`
+### Table: `favorite`
+Stores personal bookmarked repositories.
 
-| Column | Type | Key |
-|:---|:---|:---:|
-| `id` | `BIGINT` | 🔑 PK |
-| `owner` | `VARCHAR` | |
-| `repository_name` | `VARCHAR` | |
-| `created_at` | `DATETIME` | |
+| Column | Type | Constraints | Description |
+|:---|:---|:---:|:---|
+| `id` | `BIGINT` | Primary Key, Auto-Increment | Unique identifier |
+| `owner` | `VARCHAR(255)` | Not Null | Repository owner / organization |
+| `repository_name` | `VARCHAR(255)` | Not Null | Repository name |
+| `created_at` | `DATETIME` | Nullable | Timestamp when favorited |
 
 </td>
 <td width="50%">
 
-### `star_snapshot`
+### Table: `star_snapshot`
+Stores chronological star counts for velocity tracking.
 
-| Column | Type | Key |
-|:---|:---|:---:|
-| `id` | `BIGINT` | 🔑 PK |
-| `owner` | `VARCHAR` | |
-| `repository_name` | `VARCHAR` | |
-| `stars` | `INT` | |
-| `captured_at` | `DATETIME` | |
+| Column | Type | Constraints | Description |
+|:---|:---|:---:|:---|
+| `id` | `BIGINT` | Primary Key, Auto-Increment | Unique identifier |
+| `owner` | `VARCHAR(255)` | Not Null | Repository owner / organization |
+| `repository_name` | `VARCHAR(255)` | Not Null | Repository name |
+| `stars` | `INT` | Nullable | Star count at snapshot time |
+| `captured_at` | `DATETIME` | Nullable | Timestamp of snapshot |
 
 </td>
 </tr>
 </table>
 
----
+> [!NOTE]
+> This application is configured as a single-user local CLI; tables do not enforce multi-tenant or user ownership semantics.
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                    ERROR HANDLING                                -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+---
 
 ## 🔧 Error Handling
 
-The CLI provides user-friendly error messages for common GitHub API errors:
+The application provides structured error handling to prevent unhandled stack traces in the terminal.
 
-| Code | Status | Message |
+1. **Custom Exception**: `GitHubApiException` wraps HTTP status codes and underlying client errors.
+2. **CLI Error Translation**: `CliErrorHandler` maps HTTP status codes to actionable user feedback:
+
+| HTTP Status | CLI Console Output | Cause / Meaning |
 |:---:|:---|:---|
-| `400` | 🔴 Bad Request | Invalid request |
-| `401` | 🔐 Unauthorized | GitHub authentication failed |
-| `403` | 🚫 Forbidden | Access denied or rate limit reached |
-| `404` | ❓ Not Found | Repository or resource not found |
-| `422` | ⚠️ Unprocessable | GitHub could not process the request |
-| `5xx` | 💥 Server Error | GitHub server error, try again later |
-| `-1` | 🔌 Network | Could not connect to GitHub API |
+| `400` | `Invalid request.` | Malformed query parameters or invalid request syntax |
+| `401` | `GitHub authentication failed.` | Bad or invalid credentials if configured |
+| `403` | `GitHub API access was denied or rate limit was reached.` | Rate limit reached (60 req/hr for unauthenticated IPs) or access forbidden |
+| `404` | `Repository or resource was not found.` | Repository slug does not exist or is private |
+| `422` | `GitHub could not process the request.` | Unprocessable entity (e.g., query syntax error in search string) |
+| `-1` | `Could not connect to GitHub API.` | Network offline, DNS failure, or remote timeout |
+| `5xx` | `GitHub server error. Please try again later.` | GitHub upstream infrastructure error |
 
 ---
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                   PROJECT STRUCTURE                             -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
 
 ## 📁 Project Structure
 
 ```
-github-developer-insights/              ← Repository root
+github-developer-insights/                        ← Repository root
+├── 📄 README.md                                  ← Project documentation
+├── 📄 LICENSE                                    ← MIT License file
+├── 📄 .gitignore                                 ← Git ignore rules
+├── 📂 assets/                                    ← Architecture diagrams & assets
+│   ├── architecture-diagram.png                  ← Rendered architecture PNG
+│   └── architecture-diagram.svg                  ← Source vector SVG
 │
-├── 📄 README.md                        ← You are here
-├── 📄 LICENSE                          ← MIT License
-├── 📄 .gitignore
-│
-└── 📂 github-developer-insights/       ← Spring Boot module
-    ├── 📄 pom.xml                      ← Maven configuration
-    ├── 📄 mvnw / mvnw.cmd             ← Maven wrapper
+└── 📂 github-developer-insights/                 ← Spring Boot Maven module
+    ├── 📄 pom.xml                                ← Maven configuration & dependencies
+    ├── 📄 mvnw / mvnw.cmd                       ← Maven wrapper scripts
     │
     └── 📂 src/
         ├── 📂 main/
-        │   ├── 📂 java/               ← Application source code
+        │   ├── 📂 java/com/githubinsights/github_developer_insights/
+        │   │   ├── GithubDeveloperInsightsApplication.java  ← Spring Boot main & CLI wiring
+        │   │   ├── cli/                                    ← Picocli commands
+        │   │   │   └── util/                               ← InputValidator, ConsoleFormatter, CliErrorHandler
+        │   │   ├── client/                                 ← GitHubApiClient (Spring RestClient)
+        │   │   ├── dto/                                    ← RepositoryDto, SearchResponseDto
+        │   │   ├── entity/                                 ← Favorite, StarSnapshot (JPA)
+        │   │   ├── exception/                              ← GitHubApiException
+        │   │   ├── repository/                             ← FavoriteRepository, StarSnapshotRepository
+        │   │   └── service/                                ← Business logic services
         │   └── 📂 resources/
-        │       └── application.properties
-        └── 📂 test/
-            └── 📂 java/               ← Unit & integration tests
+        │       └── application.properties                  ← Configuration
+        │
+        └── 📂 test/java/com/githubinsights/github_developer_insights/
+            ├── GithubDeveloperInsightsApplicationTests.java
+            ├── cli/util/InputValidatorTest.java
+            ├── integration/FavoriteServiceIntegrationTest.java
+            └── service/FavoriteServiceTest.java
 ```
 
----
+> [!TIP]
+> **Repository Layout Note**: The Maven module is currently located in the inner `github-developer-insights/` directory. Flattening this module into the repository root is recommended as a future repository housekeeping task.
 
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                     CONTRIBUTING                                -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's the workflow:
+Contributions are welcome! Please adhere to standard open-source conventions:
 
-```
-1. 🍴 Fork the repository
-2. 🌿 Create a branch          →  git checkout -b feature/amazing-feature
-3. 💾 Commit your changes      →  git commit -m 'Add amazing feature'
-4. 📤 Push to the branch       →  git push origin feature/amazing-feature
-5. 🔀 Open a Pull Request
-```
+1. **Fork** the repository
+2. **Create a branch** for your feature:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Commit** your changes with clear commit messages:
+   ```bash
+   git commit -m "feat: add support for release tag inspection"
+   ```
+4. **Push** to your fork:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. **Open a Pull Request** explaining your changes.
 
 ---
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                       LICENSE                                   -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for complete terms.
 
 ---
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                        FOOTER                                   -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
@@ -889,17 +1006,17 @@ This project is open source and available under the [MIT License](LICENSE).
 <br/>
 
 <a href="https://github.com/akkiiop/github-developer-insights/stargazers">
-  <img src="https://img.shields.io/github/stars/akkiiop/github-developer-insights?style=social" alt="Stars"/>
+  <img src="https://img.shields.io/github/stars/akkiiop/github-developer-insights?style=social" alt="GitHub Stars"/>
 </a>
 &nbsp;&nbsp;
 <a href="https://github.com/akkiiop/github-developer-insights/network/members">
-  <img src="https://img.shields.io/github/forks/akkiiop/github-developer-insights?style=social" alt="Forks"/>
+  <img src="https://img.shields.io/github/forks/akkiiop/github-developer-insights?style=social" alt="GitHub Forks"/>
 </a>
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,25:161b22,50:1a1e2e,75:1f2937,100:0d1117&height=120&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,25:161b22,50:1a1e2e,75:1f2937,100:0d1117&height=110&section=footer" width="100%"/>
 
-<sub>⭐ If you found this project useful, consider giving it a star!</sub>
+<sub>⭐ If you find this project helpful, consider starring the repository!</sub>
 
 </div>
