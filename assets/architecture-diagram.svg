@@ -1,0 +1,338 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="canvasBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+
+    <linearGradient id="cliBoxBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#13171f"/>
+    </linearGradient>
+
+    <!-- Arrow Marker - Blue -->
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#58a6ff"/>
+    </marker>
+
+    <!-- Arrow Marker - Green -->
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#3fb950"/>
+    </marker>
+
+    <!-- Arrow Marker - Amber -->
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#d29922"/>
+    </marker>
+
+    <!-- Arrow Marker - Purple -->
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#a371f7"/>
+    </marker>
+
+    <!-- Arrow Marker - Gray -->
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#8b949e"/>
+    </marker>
+
+    <filter id="cardShadow" x="-2%" y="-4%" width="104%" height="108%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#010409" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; font-size: 23px; font-weight: 700; fill: #f0f6fc; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 500; fill: #8b949e; }
+    .layer-tag { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; }
+    .layer-desc { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 500; fill: #7d8590; }
+    .comp-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; font-size: 12.5px; font-weight: 600; fill: #e6edf3; }
+    .comp-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; font-size: 10.5px; font-weight: 400; fill: #8b949e; }
+    .badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; }
+    .arrow-label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; font-size: 10px; font-weight: 600; fill: #8b949e; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="780" rx="14" fill="url(#canvasBg)" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Header Section -->
+  <text x="600" y="40" text-anchor="middle" class="title">GitHub Developer Insights — Current CLI Architecture</text>
+  <text x="600" y="64" text-anchor="middle" class="subtitle">Java 21 • Spring Boot • Picocli • GitHub REST API • Spring Data JPA • MySQL</text>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 1: CLI LAYER                                                        -->
+  <!-- ========================================================================= -->
+  <g id="layer-cli" filter="url(#cardShadow)">
+    <!-- Container -->
+    <rect x="40" y="85" width="1120" height="152" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="1.5" fill-opacity="0.85"/>
+    
+    <!-- Header Tag -->
+    <rect x="55" y="97" width="105" height="22" rx="5" fill="#1f6feb" fill-opacity="0.25" stroke="#58a6ff" stroke-width="1"/>
+    <text x="107" y="112" text-anchor="middle" class="layer-tag" fill="#58a6ff">CLI LAYER</text>
+    <text x="175" y="112" class="layer-desc">User interaction, command dispatch &amp; ANSI output formatting</text>
+
+    <!-- Sub-header Left -->
+    <text x="56" y="133" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#7d8590">Picocli Commands</text>
+
+    <!-- 8 Commands in 2 rows of 4 -->
+    <!-- Row 1 -->
+    <g transform="translate(55, 142)">
+      <!-- TrendingCommand -->
+      <rect x="0" y="0" width="180" height="34" rx="6" fill="#21262d" stroke="#388bfd" stroke-width="1"/>
+      <text x="90" y="21" text-anchor="middle" class="comp-title">TrendingCommand</text>
+      
+      <!-- SearchCommand -->
+      <rect x="192" y="0" width="180" height="34" rx="6" fill="#21262d" stroke="#388bfd" stroke-width="1"/>
+      <text x="282" y="21" text-anchor="middle" class="comp-title">SearchCommand</text>
+
+      <!-- RepositoryCommand -->
+      <rect x="384" y="0" width="180" height="34" rx="6" fill="#21262d" stroke="#388bfd" stroke-width="1"/>
+      <text x="474" y="21" text-anchor="middle" class="comp-title">RepositoryCommand</text>
+
+      <!-- CompareCommand -->
+      <rect x="576" y="0" width="180" height="34" rx="6" fill="#21262d" stroke="#388bfd" stroke-width="1"/>
+      <text x="666" y="21" text-anchor="middle" class="comp-title">CompareCommand</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(55, 185)">
+      <!-- StarsCommand -->
+      <rect x="0" y="0" width="180" height="34" rx="6" fill="#21262d" stroke="#388bfd" stroke-width="1"/>
+      <text x="90" y="21" text-anchor="middle" class="comp-title">StarsCommand</text>
+
+      <!-- FavoriteCommand -->
+      <rect x="192" y="0" width="180" height="34" rx="6" fill="#21262d" stroke="#388bfd" stroke-width="1"/>
+      <text x="282" y="21" text-anchor="middle" class="comp-title">FavoriteCommand</text>
+
+      <!-- RemoveFavoriteCommand -->
+      <rect x="384" y="0" width="180" height="34" rx="6" fill="#21262d" stroke="#388bfd" stroke-width="1"/>
+      <text x="474" y="21" text-anchor="middle" class="comp-title">RemoveFavoriteCommand</text>
+
+      <!-- ListFavoriteCommand -->
+      <rect x="576" y="0" width="180" height="34" rx="6" fill="#21262d" stroke="#388bfd" stroke-width="1"/>
+      <text x="666" y="21" text-anchor="middle" class="comp-title">ListFavoriteCommand</text>
+    </g>
+
+    <!-- Divider Line -->
+    <line x1="835" y1="120" x2="835" y2="224" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3"/>
+
+    <!-- CLI Utilities on Right -->
+    <text x="855" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#7d8590">CLI Support Utilities</text>
+
+    <!-- Utility 1: InputValidator -->
+    <rect x="855" y="125" width="285" height="28" rx="5" fill="#1b2533" stroke="#388bfd" stroke-width="0.8"/>
+    <circle cx="872" cy="139" r="4" fill="#58a6ff"/>
+    <text x="888" y="143" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">InputValidator</text>
+    <text x="1125" y="143" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#7d8590">Param &amp; flag validation</text>
+
+    <!-- Utility 2: ConsoleFormatter -->
+    <rect x="855" y="160" width="285" height="28" rx="5" fill="#1b2533" stroke="#388bfd" stroke-width="0.8"/>
+    <circle cx="872" cy="174" r="4" fill="#58a6ff"/>
+    <text x="888" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">ConsoleFormatter</text>
+    <text x="1125" y="178" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#7d8590">ANSI color &amp; tables</text>
+
+    <!-- Utility 3: CliErrorHandler -->
+    <rect x="855" y="195" width="285" height="28" rx="5" fill="#1b2533" stroke="#f85149" stroke-width="0.8"/>
+    <circle cx="872" cy="209" r="4" fill="#f85149"/>
+    <text x="888" y="213" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">CliErrorHandler</text>
+    <text x="1125" y="213" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#f85149">User-friendly error msgs</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- CONNECTOR 1: CLI -> SERVICE LAYER                                        -->
+  <!-- ========================================================================= -->
+  <g id="conn-cli-service">
+    <line x1="435" y1="237" x2="435" y2="280" stroke="#58a6ff" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrow-blue)"/>
+    <rect x="345" y="247" width="180" height="20" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="435" y="261" text-anchor="middle" class="arrow-label" fill="#58a6ff">delegates to service layer ↓</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 2: SERVICE LAYER                                                    -->
+  <!-- ========================================================================= -->
+  <g id="layer-service" filter="url(#cardShadow)">
+    <!-- Container -->
+    <rect x="40" y="282" width="1120" height="110" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="1.5" fill-opacity="0.85"/>
+
+    <!-- Header Tag -->
+    <rect x="55" y="294" width="125" height="22" rx="5" fill="#238636" fill-opacity="0.25" stroke="#3fb950" stroke-width="1"/>
+    <text x="117" y="309" text-anchor="middle" class="layer-tag" fill="#3fb950">SERVICE LAYER</text>
+    <text x="195" y="309" class="layer-desc">Core business logic, caching, calculations &amp; entity mapping</text>
+
+    <!-- 6 Services in 1 row -->
+    <!-- 1. TrendingService -->
+    <g transform="translate(55, 328)">
+      <rect x="0" y="0" width="170" height="48" rx="6" fill="#1c2720" stroke="#2ea043" stroke-width="1"/>
+      <text x="85" y="22" text-anchor="middle" class="comp-title">TrendingService</text>
+      <text x="85" y="38" text-anchor="middle" class="comp-sub">Trending repos logic</text>
+    </g>
+
+    <!-- 2. SearchService -->
+    <g transform="translate(241, 328)">
+      <rect x="0" y="0" width="170" height="48" rx="6" fill="#1c2720" stroke="#2ea043" stroke-width="1"/>
+      <text x="85" y="22" text-anchor="middle" class="comp-title">SearchService</text>
+      <text x="85" y="38" text-anchor="middle" class="comp-sub">Query + filters</text>
+    </g>
+
+    <!-- 3. RepositoryService -->
+    <g transform="translate(427, 328)">
+      <rect x="0" y="0" width="170" height="48" rx="6" fill="#1c2720" stroke="#2ea043" stroke-width="1"/>
+      <text x="85" y="22" text-anchor="middle" class="comp-title">RepositoryService</text>
+      <text x="85" y="38" text-anchor="middle" class="comp-sub">Single repo inspection</text>
+    </g>
+
+    <!-- 4. CompareService -->
+    <g transform="translate(613, 328)">
+      <rect x="0" y="0" width="170" height="48" rx="6" fill="#1c2720" stroke="#2ea043" stroke-width="1"/>
+      <text x="85" y="22" text-anchor="middle" class="comp-title">CompareService</text>
+      <text x="85" y="38" text-anchor="middle" class="comp-sub">Side-by-side metric diff</text>
+    </g>
+
+    <!-- 5. StarTrackingService -->
+    <g transform="translate(799, 328)">
+      <rect x="0" y="0" width="170" height="48" rx="6" fill="#1c2720" stroke="#2ea043" stroke-width="1"/>
+      <text x="85" y="22" text-anchor="middle" class="comp-title">StarTrackingService</text>
+      <text x="85" y="38" text-anchor="middle" class="comp-sub">Velocity &amp; snapshots</text>
+    </g>
+
+    <!-- 6. FavoriteService -->
+    <g transform="translate(985, 328)">
+      <rect x="0" y="0" width="170" height="48" rx="6" fill="#1c2720" stroke="#2ea043" stroke-width="1"/>
+      <text x="85" y="22" text-anchor="middle" class="comp-title">FavoriteService</text>
+      <text x="85" y="38" text-anchor="middle" class="comp-sub">Add, list, remove repos</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- CONNECTOR 2: SERVICES -> INTEGRATION & PERSISTENCE                        -->
+  <!-- ========================================================================= -->
+  <g id="conn-service-data">
+    <!-- TrendingService (cx: 140) -> GitHubApiClient (x: 140) -->
+    <path d="M 140 376 L 140 450" fill="none" stroke="#d29922" stroke-width="1.8" marker-end="url(#arrow-amber)"/>
+
+    <!-- SearchService (cx: 326) -> GitHubApiClient (x: 250) -->
+    <path d="M 326 376 L 326 410 L 260 410 L 260 450" fill="none" stroke="#d29922" stroke-width="1.8" marker-end="url(#arrow-amber)"/>
+
+    <!-- RepositoryService (cx: 512) -> GitHubApiClient (x: 375) -->
+    <path d="M 512 376 L 512 410 L 380 410 L 380 450" fill="none" stroke="#d29922" stroke-width="1.8" marker-end="url(#arrow-amber)"/>
+
+    <!-- CompareService (cx: 698) -> GitHubApiClient (x: 490) -->
+    <path d="M 698 376 L 698 420 L 490 420 L 490 450" fill="none" stroke="#d29922" stroke-width="1.8" marker-end="url(#arrow-amber)"/>
+
+    <!-- StarTrackingService (cx: 884) -> GitHubApiClient (x: 540) -->
+    <path d="M 860 376 L 860 428 L 540 428 L 540 450" fill="none" stroke="#d29922" stroke-width="1.8" stroke-dasharray="3,3" marker-end="url(#arrow-amber)"/>
+
+    <!-- StarTrackingService (cx: 884) -> JPA Repositories (x: 820) -->
+    <path d="M 905 376 L 905 450" fill="none" stroke="#a371f7" stroke-width="1.8" marker-end="url(#arrow-purple)"/>
+
+    <!-- FavoriteService (cx: 1070) -> JPA Repositories (x: 1020) -->
+    <path d="M 1070 376 L 1070 415 L 1000 415 L 1000 450" fill="none" stroke="#a371f7" stroke-width="1.8" marker-end="url(#arrow-purple)"/>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 3: INTEGRATION & DATA LAYER                                         -->
+  <!-- ========================================================================= -->
+  <g id="layer-data" filter="url(#cardShadow)">
+    <!-- Container -->
+    <rect x="40" y="452" width="1120" height="134" rx="10" fill="#161b22" stroke="#d29922" stroke-width="1.5" fill-opacity="0.85"/>
+
+    <!-- Header Tag -->
+    <rect x="55" y="464" width="225" height="22" rx="5" fill="#9e6a03" fill-opacity="0.25" stroke="#d29922" stroke-width="1"/>
+    <text x="167" y="479" text-anchor="middle" class="layer-tag" fill="#d29922">INTEGRATION &amp; DATA LAYER</text>
+    <text x="295" y="479" class="layer-desc">HTTP API Client integration &amp; relational data persistence abstractions</text>
+
+    <!-- Component 1: GitHubApiClient (Left Box) -->
+    <g transform="translate(55, 496)">
+      <rect x="0" y="0" width="510" height="74" rx="8" fill="#241e15" stroke="#d29922" stroke-width="1.2"/>
+      
+      <!-- Icon & Title -->
+      <circle cx="28" cy="27" r="12" fill="#9e6a03" fill-opacity="0.4"/>
+      <text x="28" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#d29922">⚡</text>
+      
+      <text x="50" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#f0f6fc">GitHubApiClient</text>
+      <rect x="180" y="14" width="115" height="18" rx="4" fill="#bb8009" fill-opacity="0.2" stroke="#d29922" stroke-width="0.8"/>
+      <text x="237" y="27" text-anchor="middle" class="badge-text" fill="#e3b341">Spring RestClient</text>
+
+      <text x="50" y="48" class="comp-sub" fill="#8b949e">Application integration client for GitHub REST v3 endpoints</text>
+      <text x="50" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#7d8590">Manages HTTP headers, auth tokens, rate limit headers &amp; JSON deserialization</text>
+    </g>
+
+    <!-- Component 2: JPA Repositories (Right Box) -->
+    <g transform="translate(635, 496)">
+      <rect x="0" y="0" width="510" height="74" rx="8" fill="#1e1828" stroke="#a371f7" stroke-width="1.2"/>
+      
+      <!-- Icon & Title -->
+      <circle cx="28" cy="27" r="12" fill="#8957e5" fill-opacity="0.4"/>
+      <text x="28" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#a371f7">💾</text>
+
+      <text x="50" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#f0f6fc">JPA Repositories</text>
+      <rect x="180" y="14" width="118" height="18" rx="4" fill="#8957e5" fill-opacity="0.2" stroke="#a371f7" stroke-width="0.8"/>
+      <text x="239" y="27" text-anchor="middle" class="badge-text" fill="#d2a8ff">Spring Data JPA</text>
+
+      <!-- 2 Repository Pills -->
+      <g transform="translate(50, 42)">
+        <rect x="0" y="0" width="215" height="24" rx="5" fill="#292039" stroke="#8957e5" stroke-width="0.8"/>
+        <text x="107" y="16" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#e6edf3">FavoriteRepository</text>
+
+        <rect x="230" y="0" width="215" height="24" rx="5" fill="#292039" stroke="#8957e5" stroke-width="0.8"/>
+        <text x="337" y="16" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#e6edf3">StarSnapshotRepository</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- CONNECTOR 3: CLIENT / REPOS -> EXTERNAL SYSTEMS                           -->
+  <!-- ========================================================================= -->
+  <g id="conn-data-external">
+    <!-- GitHubApiClient -> GitHub REST API -->
+    <line x1="310" y1="586" x2="310" y2="648" stroke="#d29922" stroke-width="2" marker-end="url(#arrow-amber)"/>
+    <rect x="205" y="605" width="210" height="20" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="310" y="619" text-anchor="middle" class="arrow-label" fill="#d29922">HTTPS / JSON REST API Calls ↓</text>
+
+    <!-- JPA Repositories -> MySQL Database -->
+    <line x1="890" y1="586" x2="890" y2="648" stroke="#a371f7" stroke-width="2" marker-end="url(#arrow-purple)"/>
+    <rect x="785" y="605" width="210" height="20" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="890" y="619" text-anchor="middle" class="arrow-label" fill="#a371f7">JDBC / SQL Queries &amp; Transactions ↓</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 4: EXTERNAL SYSTEMS (OUTSIDE APPLICATION BOUNDARY)                 -->
+  <!-- ========================================================================= -->
+  <g id="layer-external" filter="url(#cardShadow)">
+    <!-- Container -->
+    <rect x="40" y="650" width="1120" height="98" rx="10" fill="#0d1117" stroke="#8b949e" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+    <!-- Header Tag -->
+    <rect x="55" y="660" width="165" height="22" rx="5" fill="#30363d" fill-opacity="0.6" stroke="#8b949e" stroke-width="1"/>
+    <text x="137" y="675" text-anchor="middle" class="layer-tag" fill="#8b949e">EXTERNAL SYSTEMS</text>
+    <text x="235" y="675" class="layer-desc" fill="#6e7681">(Outside Application Boundary — Remote API &amp; Persistent Database)</text>
+
+    <!-- External 1: GitHub REST API -->
+    <g transform="translate(55, 690)">
+      <rect x="0" y="0" width="510" height="46" rx="7" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      
+      <!-- GitHub Icon -->
+      <path d="M 28 15 C 20.27 15 14 21.27 14 29 C 14 35.19 18.01 40.43 23.59 42.29 C 24.29 42.42 24.55 41.99 24.55 41.62 C 24.55 41.29 24.53 40.2 24.53 39.04 C 20.63 39.89 19.81 37.37 19.81 37.37 C 19.17 35.75 18.25 35.32 18.25 35.32 C 16.98 34.45 18.35 34.47 18.35 34.47 C 19.76 34.57 20.5 35.92 20.5 35.92 C 21.75 38.07 23.78 37.45 24.58 37.09 C 24.71 36.18 25.07 35.56 25.47 35.21 C 22.36 34.86 19.09 33.65 19.09 28.27 C 19.09 26.74 19.64 25.48 20.53 24.5 C 20.39 24.14 19.91 22.71 20.67 20.78 C 20.67 20.78 21.85 20.4 24.53 22.22 C 25.65 21.91 26.85 21.75 28.05 21.75 C 29.25 21.75 30.45 21.91 31.57 22.22 C 34.25 20.4 35.43 20.78 35.43 20.78 C 36.19 22.71 35.71 24.14 35.57 24.5 C 36.47 25.48 37.01 26.74 37.01 28.27 C 37.01 33.67 33.72 34.85 30.6 35.2 C 31.1 35.63 31.55 36.49 31.55 37.8 C 31.55 39.69 31.53 41.21 31.53 41.62 C 31.53 41.99 31.78 42.43 32.49 42.29 C 38.07 40.42 42.08 35.19 42.08 29 C 42.08 21.27 35.81 15 28 15 Z" fill="#f0f6fc"/>
+      
+      <text x="56" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13.5" font-weight="700" fill="#f0f6fc">GitHub REST API</text>
+      <text x="180" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#58a6ff">(api.github.com)</text>
+      <text x="56" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#7d8590">Remote endpoints: /search/repositories, /repos/{owner}/{repo}</text>
+    </g>
+
+    <!-- External 2: MySQL Database -->
+    <g transform="translate(635, 690)">
+      <rect x="0" y="0" width="510" height="46" rx="7" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      
+      <!-- Database Cylinder Icon -->
+      <g transform="translate(20, 14)">
+        <path d="M 0 5 C 0 2.2 4.5 0 10 0 C 15.5 0 20 2.2 20 5 L 20 15 C 20 17.8 15.5 20 10 20 C 4.5 20 0 17.8 0 15 Z" fill="#00758f" fill-opacity="0.3" stroke="#00758f" stroke-width="1.2"/>
+        <ellipse cx="10" cy="5" rx="10" ry="4" fill="#00758f" fill-opacity="0.6" stroke="#00758f" stroke-width="1"/>
+        <path d="M 0 10 C 0 12.5 4.5 14.5 10 14.5 C 15.5 14.5 20 12.5 20 10" fill="none" stroke="#00758f" stroke-width="1"/>
+      </g>
+
+      <text x="56" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13.5" font-weight="700" fill="#f0f6fc">MySQL Database</text>
+      <text x="175" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#f29111">(Relational Storage)</text>
+      <text x="56" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10.5" fill="#7d8590">Tables: `favorites` (bookmarks) • `star_snapshots` (star velocity history)</text>
+    </g>
+  </g>
+</svg>

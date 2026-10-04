@@ -157,47 +157,80 @@ A terminal-first tool that puts the entire GitHub ecosystem at your fingertips. 
 
 ## 🏛️ Architecture
 
-The application follows a **layered architecture** with clean separation of concerns:
+The application strictly follows a **clean layered architecture** with separation of concerns:
+
+<div align="center">
+  <img src="assets/architecture-diagram.png" alt="GitHub Developer Insights — Current CLI Architecture" width="100%" style="border-radius: 10px;"/>
+</div>
+
+<br/>
+
+<details>
+<summary><kbd>📊 Click to view interactive Mermaid diagram</kbd></summary>
+<br/>
 
 ```mermaid
 graph TB
-    subgraph CLI["⌨️ CLI Layer"]
-        A[Picocli Commands]
-        B[InputValidator]
-        C[ConsoleFormatter]
-        D[CliErrorHandler]
+    subgraph CLI["⌨️ CLI Layer (Picocli & Utilities)"]
+        direction TB
+        subgraph CMDS["Picocli Commands"]
+            C1[TrendingCommand]
+            C2[SearchCommand]
+            C3[RepositoryCommand]
+            C4[CompareCommand]
+            C5[StarsCommand]
+            C6[FavoriteCommand]
+            C7[RemoveFavoriteCommand]
+            C8[ListFavoriteCommand]
+        end
+        subgraph UTILS["CLI Support"]
+            U1[InputValidator]
+            U2[ConsoleFormatter]
+            U3[CliErrorHandler]
+        end
     end
     
-    subgraph SVC["⚙️ Service Layer"]
-        E[TrendingService]
-        F[SearchService]
-        G[RepositoryService]
-        H[CompareService]
-        I[StarTrackingService]
-        J[FavoriteService]
+    subgraph SVC["⚙️ Service Layer (Business Logic)"]
+        S1[TrendingService]
+        S2[SearchService]
+        S3[RepositoryService]
+        S4[CompareService]
+        S5[StarTrackingService]
+        S6[FavoriteService]
     end
     
-    subgraph DATA["💾 Data Layer"]
-        K[GitHubApiClient<br/>Spring RestClient]
-        L[JPA Repositories<br/>Spring Data]
+    subgraph DATA["💾 Integration & Data Layer"]
+        API["GitHubApiClient<br/>(Spring RestClient)"]
+        subgraph JPA["JPA Repositories (Spring Data JPA)"]
+            R1[FavoriteRepository]
+            R2[StarSnapshotRepository]
+        end
     end
     
-    subgraph EXT["🌐 External"]
-        M[(GitHub REST API)]
-        N[(MySQL Database)]
+    subgraph EXT["🌐 External Systems"]
+        GH[("GitHub REST API<br/>api.github.com")]
+        DB[("MySQL Database<br/>favorites & star_snapshots")]
     end
 
-    A --> E & F & G & H & I & J
-    E & F & G & H & I --> K
-    I & J --> L
-    K --> M
-    L --> N
+    CMDS -->|invokes| SVC
+    S1 & S2 & S3 & S4 --> API
+    S5 --> API
+    S5 --> JPA
+    S6 --> JPA
+    API -->|HTTPS / REST| GH
+    JPA -->|JDBC / SQL| DB
 
-    style CLI fill:#1a1e2e,stroke:#58a6ff,color:#c9d1d9
-    style SVC fill:#1a1e2e,stroke:#3fb950,color:#c9d1d9
-    style DATA fill:#1a1e2e,stroke:#d29922,color:#c9d1d9
-    style EXT fill:#0d1117,stroke:#8b949e,color:#c9d1d9
+    style CLI fill:#161b22,stroke:#58a6ff,color:#f0f6fc
+    style CMDS fill:#21262d,stroke:#388bfd,color:#c9d1d9
+    style UTILS fill:#21262d,stroke:#388bfd,color:#c9d1d9
+    style SVC fill:#161b22,stroke:#3fb950,color:#f0f6fc
+    style DATA fill:#161b22,stroke:#d29922,color:#f0f6fc
+    style API fill:#21262d,stroke:#d29922,color:#c9d1d9
+    style JPA fill:#21262d,stroke:#a371f7,color:#c9d1d9
+    style EXT fill:#0d1117,stroke:#8b949e,stroke-dasharray: 5 5,color:#8b949e
 ```
+
+</details>
 
 <details>
 <summary><kbd>📂 Click to expand full package structure</kbd></summary>
