@@ -1,18 +1,20 @@
 package com.githubinsights.github_developer_insights.service;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
-import java.time.format.DateTimeFormatter;
 
 import org.springframework.stereotype.Service;
-import com.githubinsights.github_developer_insights.cli.util.ConsoleFormatter;
 
 import com.githubinsights.github_developer_insights.entity.Favorite;
 import com.githubinsights.github_developer_insights.repository.FavoriteRepository;
 
 @Service
 public class FavoriteService {
+
+    private static final DateTimeFormatter DATE_TIME_FORMATTER =
+            DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     private final FavoriteRepository favoriteRepository;
 
@@ -40,7 +42,7 @@ public class FavoriteService {
             );
 
             System.out.println(
-                    "Repository: "
+                    "Repository  : "
                             + owner
                             + "/"
                             + repositoryName
@@ -66,18 +68,18 @@ public class FavoriteService {
                 "Repository added to favorites."
         );
 
-        System.out.println("----------------------------------");
+        System.out.println("--------------------------------------------------");
 
         System.out.println(
-                "Repository: "
+                "Repository  : "
                         + owner
                         + "/"
                         + repositoryName
         );
 
         System.out.println(
-                "Added At: "
-                        + favorite.getCreatedAt()
+                "Added At    : "
+                        + favorite.getCreatedAt().format(DATE_TIME_FORMATTER)
         );
     }
 
@@ -86,34 +88,48 @@ public class FavoriteService {
         List<Favorite> favorites =
                 favoriteRepository.findAllByOrderByCreatedAtAsc();
 
-        System.out.println();
-        System.out.println(
-                "======================================================================"
-        );
-        System.out.println(" Favorite Repositories");
-        System.out.println(
-                "======================================================================"
-        );
-        System.out.println();
-
         if (favorites.isEmpty()) {
+            System.out.println();
             System.out.println("No favorite repositories found.");
             return;
         }
 
+        int col1Width = 4;
+        int maxRepoLength = "Repository".length();
+        for (Favorite fav : favorites) {
+            String fullName = fav.getOwner() + "/" + fav.getRepositoryName();
+            if (fullName.length() > maxRepoLength) {
+                maxRepoLength = fullName.length();
+            }
+        }
+        int col2Width = Math.max(35, maxRepoLength + 2);
+        int col3Width = 20;
+
+        int totalWidth = col1Width + 1 + col2Width + 1 + col3Width;
+
+        String headerLine = "=".repeat(totalWidth);
+        String subLine = "-".repeat(totalWidth);
+
+        String title = "FAVORITE REPOSITORIES";
+        int titlePadding = Math.max(0, (totalWidth - title.length()) / 2);
+        String centeredTitle = " ".repeat(titlePadding) + title;
+
+        String format = "%-" + col1Width + "s %-" + col2Width + "s %-" + col3Width + "s%n";
+
+        System.out.println();
+        System.out.println(headerLine);
+        System.out.println(centeredTitle);
+        System.out.println(headerLine);
+        System.out.println();
+
         System.out.printf(
-                "%-5s %-35s %-20s%n",
+                format,
                 "ID",
                 "Repository",
                 "Added At"
         );
 
-        System.out.println(
-                "----------------------------------------------------------------------"
-        );
-
-        DateTimeFormatter formatter =
-                DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        System.out.println(subLine);
 
         int displayId = 1;
 
@@ -125,11 +141,11 @@ public class FavoriteService {
                             + favorite.getRepositoryName();
 
             String addedAt =
-                    favorite.getCreatedAt().format(formatter);
+                    favorite.getCreatedAt().format(DATE_TIME_FORMATTER);
 
             System.out.printf(
-                    "%-5d %-35s %-20s%n",
-                    displayId,
+                    format,
+                    String.valueOf(displayId),
                     repository,
                     addedAt
             );
@@ -137,16 +153,13 @@ public class FavoriteService {
             displayId++;
         }
 
+        System.out.println(subLine);
         System.out.println(
-                "----------------------------------------------------------------------"
+                "Total Favorites : " + favorites.size()
         );
-
-        System.out.println();
-        System.out.println(
-                "Total Favorites: " + favorites.size()
-        );
+        System.out.println(headerLine);
     }
-    
+
     public void removeFavorite(String owner, String repositoryName) {
 
         Optional<Favorite> existingFavorite =
@@ -159,7 +172,7 @@ public class FavoriteService {
             System.out.println();
             System.out.println("Repository is not in favorites.");
             System.out.println(
-                    "Repository: " + owner + "/" + repositoryName
+                    "Repository  : " + owner + "/" + repositoryName
             );
             return;
         }
@@ -168,9 +181,9 @@ public class FavoriteService {
 
         System.out.println();
         System.out.println("Repository removed from favorites.");
-        System.out.println("----------------------------------");
+        System.out.println("--------------------------------------------------");
         System.out.println(
-                "Repository: " + owner + "/" + repositoryName
+                "Repository  : " + owner + "/" + repositoryName
         );
     }
-}
+}
