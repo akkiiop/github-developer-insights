@@ -90,7 +90,6 @@ public class CompareService {
 
         printTextComparison(
                 format,
-                col4Width,
                 "Language",
                 repo1.getLanguage(),
                 repo2.getLanguage()
@@ -98,7 +97,6 @@ public class CompareService {
 
         printTextComparison(
                 format,
-                col4Width,
                 "Archived",
                 repo1.getArchived(),
                 repo2.getArchived()
@@ -106,7 +104,6 @@ public class CompareService {
 
         printTextComparison(
                 format,
-                col4Width,
                 "Fork",
                 repo1.getFork(),
                 repo2.getFork()
@@ -137,21 +134,34 @@ public class CompareService {
 
     private void printTextComparison(
             String format,
-            int col4Width,
             String metric,
             Object value1,
             Object value2) {
-
-        int pad = (col4Width - 1) / 2;
-        String centeredDash = " ".repeat(pad) + "-" + " ".repeat(col4Width - 1 - pad);
 
         System.out.printf(
                 format,
                 metric,
                 formatValue(value1),
                 formatValue(value2),
-                centeredDash
+                compareTextValues(value1, value2)
         );
+    }
+
+    private String compareTextValues(Object value1, Object value2) {
+
+        if (value1 == null && value2 == null) {
+            return "N/A";
+        }
+
+        if (value1 == null || value2 == null) {
+            return "Different";
+        }
+
+        if (value1 instanceof String s1 && value2 instanceof String s2) {
+            return s1.equalsIgnoreCase(s2) ? "Same" : "Different";
+        }
+
+        return value1.equals(value2) ? "Same" : "Different";
     }
 
     private String formatNumber(int value) {

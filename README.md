@@ -121,106 +121,94 @@ This project addresses that friction by:
 
 ## 🖥️ CLI Preview
 
-Below are illustrative terminal outputs demonstrating key workflows supported by the CLI:
+Below are high-resolution terminal outputs and live workflow demonstrations across all 6 core features:
 
 <details open>
-<summary><kbd>🔍 Repository Search &amp; Filtering</kbd></summary>
+<summary><kbd>🔥 Trending Repository Discovery</kbd></summary>
+<br/>
 
+```bash
+$ java -jar target/*.jar trending --duration week --limit 5
 ```
-$ java -jar target/*.jar search --query "web framework" --language Rust --sort forks --order desc --limit 2
 
-=================================================================================
-                            GITHUB REPOSITORY SEARCH
-=================================================================================
-Query: web framework | Language: Rust | Sort: forks (desc) | Repositories Found: 845
----------------------------------------------------------------------------------
-#   Repository                           Language            Stars          Forks
----------------------------------------------------------------------------------
-1   actix/actix-web                      Rust               22,100          2,300
-2   tokio-rs/axum                        Rust               19,400          1,450
-=================================================================================
-```
+<div align="center">
+  <img src="assets/trending.png" alt="Trending Repositories CLI Preview" width="100%" style="max-width: 720px; border-radius: 8px;"/>
+</div>
 
 </details>
 
 <details>
-<summary><kbd>⚖️ Repository Comparison</kbd></summary>
+<summary><kbd>🔍 Multi-Filter Repository Search</kbd></summary>
+<br/>
 
+```bash
+$ java -jar target/*.jar search --query "spring boot" --language Java --sort stars --order desc --limit 5
 ```
+
+<div align="center">
+  <img src="assets/search.png" alt="Repository Search CLI Preview" width="100%" style="max-width: 800px; border-radius: 8px;"/>
+</div>
+
+</details>
+
+<details>
+<summary><kbd>📋 Repository Details Inspection</kbd></summary>
+<br/>
+
+```bash
+$ java -jar target/*.jar repository spring-projects/spring-boot
+```
+
+<div align="center">
+  <img src="assets/repository-details.png" alt="Repository Details CLI Preview" width="100%" style="max-width: 720px; border-radius: 8px;"/>
+</div>
+
+</details>
+
+<details>
+<summary><kbd>⚖️ Side-by-Side Metric Comparison</kbd></summary>
+<br/>
+
+```bash
 $ java -jar target/*.jar compare spring-projects/spring-boot quarkusio/quarkus
-
-==================================================================
-                      REPOSITORY COMPARISON
-==================================================================
-
-Metric                spring-boot          quarkus      Difference
-------------------------------------------------------------------
-Stars                      75,200           14,100         -61,100
-Forks                      41,300            2,700         -38,600
-Open Issues                   520              680            +160
-------------------------------------------------------------------
-Language                     Java             Java        -       
-Archived                    false            false        -       
-Fork                        false            false        -       
-==================================================================
 ```
+
+<div align="center">
+  <img src="assets/compare.png" alt="Repository Comparison CLI Preview" width="100%" style="max-width: 720px; border-radius: 8px;"/>
+</div>
 
 </details>
 
 <details>
 <summary><kbd>⭐ Star Tracking &amp; Growth History</kbd></summary>
+<br/>
 
+```bash
+$ java -jar target/*.jar stars spring-projects/spring-boot --history
 ```
-$ java -jar target/*.jar stars torvalds/linux --history
 
-Star snapshot saved successfully.
---------------------------------------------------
-Repository  : torvalds/linux
-Stars       : 185,420
-Captured At : 2026-10-04 10:15:30
-
-==================================================
-                   STAR HISTORY
-==================================================
-Repository  : torvalds/linux
-
-Captured At                                  Stars
---------------------------------------------------
-2026-09-01 08:00:00                        180,000
-2026-09-18 12:30:00                        182,500
-2026-10-04 10:15:30                        185,420
---------------------------------------------------
-Total Growth : +5,420
-Snapshots    : 3
-==================================================
-```
+<div align="center">
+  <img src="assets/tracking.png" alt="Star Tracking CLI Preview" width="100%" style="max-width: 560px; border-radius: 8px;"/>
+</div>
 
 </details>
 
 <details>
-<summary><kbd>📌 Favorite Repositories</kbd></summary>
+<summary><kbd>📌 Favorite Repositories Management</kbd></summary>
+<br/>
 
-```
+```bash
 $ java -jar target/*.jar favorite list
-
-=============================================================
-                    FAVORITE REPOSITORIES
-=============================================================
-
-ID   Repository                          Added At            
--------------------------------------------------------------
-1    torvalds/linux                      2026-10-01 14:30:00 
-2    spring-projects/spring-boot         2026-10-02 09:15:00 
-3    facebook/react                      2026-10-03 20:00:00 
--------------------------------------------------------------
-Total Favorites : 3
-=============================================================
 ```
+
+<div align="center">
+  <img src="assets/favorites.png" alt="Favorite Repositories CLI Preview" width="100%" style="max-width: 650px; border-radius: 8px;"/>
+</div>
 
 </details>
 
 > [!NOTE]
-> Output values shown above are illustrative representations of terminal execution.
+> Output values shown above are live terminal screenshots captured from application execution.
 
 ---
 
@@ -522,6 +510,11 @@ java -jar target/*.jar trending --duration month --limit 5
 java -jar target/*.jar trending --duration day --language Python
 ```
 
+#### Output Preview:
+<div align="center">
+  <img src="assets/trending.png" alt="Trending Command Output" width="100%" style="max-width: 720px; border-radius: 8px;"/>
+</div>
+
 ---
 
 ### 2. `search` — Multi-Filter Repository Search
@@ -554,6 +547,11 @@ java -jar target/*.jar search --query "microservice" --language Go --sort forks 
 java -jar target/*.jar search --query "cli tool" --sort updated --order asc
 ```
 
+#### Output Preview:
+<div align="center">
+  <img src="assets/search.png" alt="Search Command Output" width="100%" style="max-width: 800px; border-radius: 8px;"/>
+</div>
+
 ---
 
 ### 3. `repository` — Repository Details Inspection
@@ -575,6 +573,11 @@ java -jar target/*.jar repository <owner/repository>
 java -jar target/*.jar repository spring-projects/spring-boot
 java -jar target/*.jar repository torvalds/linux
 ```
+
+#### Output Preview:
+<div align="center">
+  <img src="assets/repository-details.png" alt="Repository Details Command Output" width="100%" style="max-width: 720px; border-radius: 8px;"/>
+</div>
 
 ---
 
@@ -598,6 +601,11 @@ java -jar target/*.jar compare <owner1/repo1> <owner2/repo2>
 java -jar target/*.jar compare spring-projects/spring-boot quarkusio/quarkus
 java -jar target/*.jar compare facebook/react angular/angular
 ```
+
+#### Output Preview:
+<div align="center">
+  <img src="assets/compare.png" alt="Compare Command Output" width="100%" style="max-width: 720px; border-radius: 8px;"/>
+</div>
 
 ---
 
@@ -625,6 +633,11 @@ java -jar target/*.jar stars torvalds/linux
 java -jar target/*.jar stars torvalds/linux --history
 ```
 
+#### Output Preview:
+<div align="center">
+  <img src="assets/tracking.png" alt="Stars Command Output" width="100%" style="max-width: 560px; border-radius: 8px;"/>
+</div>
+
 ---
 
 ### 6. `favorite` — Local Bookmark Management
@@ -647,6 +660,11 @@ java -jar target/*.jar favorite list
 # Remove a repository from favorites
 java -jar target/*.jar favorite remove spring-projects/spring-boot
 ```
+
+#### Output Preview:
+<div align="center">
+  <img src="assets/favorites.png" alt="Favorites Command Output" width="100%" style="max-width: 650px; border-radius: 8px;"/>
+</div>
 
 ---
 

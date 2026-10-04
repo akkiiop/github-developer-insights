@@ -26,11 +26,6 @@ public class TrendingService {
             String duration,
             int limit, String language) {
 
-        System.out.println("GitHub Trending Repositories");
-        System.out.println("----------------------------------");
-        System.out.println("Duration: " + duration);
-        System.out.println("Limit: " + limit);
-
         LocalDate startDate = calculateStartDate(duration);
 
         String query =
@@ -42,10 +37,6 @@ public class TrendingService {
             query = query + " language:" + language;
         }
 
-        System.out.println(
-                "Search Query: " + query
-        );
-        
         SearchResponseDto response =
                 gitHubApiClient.searchRepositories(
                         query,
@@ -57,30 +48,97 @@ public class TrendingService {
         List<RepositoryDto> repositories =
                 response.getItems();
 
-        System.out.println();
-        System.out.println("Repositories Found: "
-                + response.getTotalCount());
+        if (repositories == null || repositories.isEmpty()) {
+            System.out.println();
+            System.out.println("No trending repositories found for the specified period.");
+            return;
+        }
+
+        int col1Width = 4;
+        int maxRepoLength = "Repository".length();
+        int maxLangLength = "Language".length();
+
+        for (RepositoryDto repo : repositories) {
+            if (repo.getFullName() != null && repo.getFullName().length() > maxRepoLength) {
+                maxRepoLength = repo.getFullName().length();
+            }
+            if (repo.getLanguage() != null && repo.getLanguage().length() > maxLangLength) {
+                maxLangLength = repo.getLanguage().length();
+            }
+        }
+
+        int col2Width = Math.max(30, maxRepoLength + 2);
+        int col3Width = Math.max(12, maxLangLength + 2);
+        int col4Width = 12;
+
+        int tableWidth = col1Width + 1 + col2Width + 1 + col3Width + 1 + col4Width;
+
+        String langStr = (language != null && !language.isBlank()) ? language : "All";
+        String metaLine = "Duration: " + duration
+                + " | Language: " + langStr
+                + " | Repositories Found: " + formatNumber(response.getTotalCount());
+
+        int totalWidth = Math.max(tableWidth, metaLine.length());
+
+        if (totalWidth > tableWidth) {
+            col2Width += (totalWidth - tableWidth);
+        }
+
+        String headerLine = "=".repeat(totalWidth);
+        String subLine = "-".repeat(totalWidth);
+
+        String title = "GITHUB TRENDING REPOSITORIES";
+        int pad = Math.max(0, (totalWidth - title.length()) / 2);
+        String centeredTitle = " ".repeat(pad) + title;
+
+        String format = "%-" + col1Width + "s %-" + col2Width + "s %-" + col3Width + "s %" + col4Width + "s%n";
 
         System.out.println();
+        System.out.println(headerLine);
+        System.out.println(centeredTitle);
+        System.out.println(headerLine);
+        System.out.println(metaLine);
+        System.out.println(subLine);
+
+        System.out.printf(
+                format,
+                "#",
+                "Repository",
+                "Language",
+                "Stars"
+        );
+
+        System.out.println(subLine);
+
+        int displayId = 1;
 
         for (RepositoryDto repository : repositories) {
 
-            System.out.println(
-                    repository.getFullName()
+            String lang = repository.getLanguage() == null
+                    ? "N/A"
+                    : repository.getLanguage();
+
+            System.out.printf(
+                    format,
+                    String.valueOf(displayId),
+                    repository.getFullName(),
+                    lang,
+                    formatNumber(repository.getStargazersCount())
             );
 
-            System.out.println(
-                    "Language: "
-                    + repository.getLanguage()
-            );
-
-            System.out.println(
-                    "Stars: "
-                    + repository.getStargazersCount()
-            );
-
-            System.out.println("----------------------------------");
+            displayId++;
         }
+
+        System.out.println(headerLine);
+    }
+
+    private String formatNumber(Integer value) {
+
+        if (value == null) {
+            return "N/A";
+        }
+
+        return String.format("%,d", value);
     }
     
     
